@@ -1,7 +1,6 @@
 ---
 import type { MarkdownHeading } from 'astro'
 
-import Giscus from '@/components/Content/Giscus.astro'
 import { tocHeadingId } from '@/components/Content/TableOfContents/constants'
 import TableOfContents from '@/components/Content/TableOfContents/TableOfContents.astro'
 import Prose from '@/components/MDX/Prose.astro'
@@ -68,7 +67,6 @@ const { pageTitle, pageDescription, headings, ogType = 'website' } = Astro.props
           </div>
         </article>
       </main>
-      <Giscus className="mt-16" />
     </div>
   </Fragment>
 
