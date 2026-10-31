@@ -1,6 +1,6 @@
 {
-  "name": "Marek Honzal",
-  "short_name": "Marek Honzal",
+  "name": "Devanshi Jaiswal",
+  "short_name": "Devanshi Jaiswal",
   "start_url": "/",
   "scope": "/",
   "theme_color": "#151219",
@@ -38,7 +38,7 @@
     {
       "name": "Projects",
       "short_name": "Projects",
-      "description": "A collection of personal projects, experiments, and tools by Marek Honzal.",
+      "description": "A collection of personal projects, experiments, and tools by Devanshi Jaiswal.",
       "url": "/projects",
       "icons": [
         {

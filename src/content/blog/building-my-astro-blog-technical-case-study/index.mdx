@@ -201,7 +201,7 @@ concrete sitemap URL in production.
 `WebSite`, `Person`, and `BlogPosting` using typed content.
 
 **Implementation.** Full definition lives
-[here](https://github.com/marekh19/marekhonzal.com/blob/main/src/config/schemaJson.ts).
+[here](https://github.com/Astraflowww/astrafloww-main/blob/main/src/config/schemaJson.ts).
 Below is an example of just the `PersonSchema`:
 
 ```ts
@@ -210,7 +210,7 @@ export const createPersonSchema = (siteUrl: URL) =>
     ...CONTEXT,
     '@type': 'Person',
     '@id': createId(IDS.me, siteUrl),
-    name: 'Marek Honzal',
+    name: 'Devanshi Jaiswal',
     url: siteUrl,
     sameAs: SAME_AS,
   }) as const
@@ -223,13 +223,13 @@ Which then produces this:
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://marekhonzal.com#me",
-    "name": "Marek Honzal",
-    "url": "https://marekhonzal.com/",
+    "@id": "https://devanshi.dev#me",
+    "name": "Devanshi Jaiswal",
+    "url": "https://devanshi.dev/",
     "sameAs": [
-      "https://www.linkedin.com/in/marekhonzal",
-      "https://github.com/marekh19",
-      "https://bsky.app/profile/marekhonzal.com"
+      "https://www.linkedin.com/in/devanshijaiswal",
+      "https://github.com/devanshishs",
+      "https://bsky.app/profile/devanshi.dev"
     ]
   }
 </script>
