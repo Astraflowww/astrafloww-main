@@ -1,4 +1,4 @@
-# marekhonzal.com
+# Astrafloww.in
 
 Personal website and blog built with [Astro](https://astro.build/), featuring blog posts,
 project showcases, and a clean, performant static site architecture.
