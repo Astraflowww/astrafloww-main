@@ -18,15 +18,5 @@ export const envConfig = {
       access: 'secret',
       default: crypto.randomUUID(),
     }),
-    PUBLIC_UMAMI_SITE_ID: envField.string({
-      context: 'client',
-      access: 'public',
-      default: crypto.randomUUID(),
-    }),
-    PUBLIC_UMAMI_SHARE_URL: envField.string({
-      context: 'client',
-      access: 'public',
-      default: 'https://a7s.hnzl.dev',
-    }),
   },
 } as const satisfies AstroUserConfig['env']

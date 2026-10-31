@@ -18,10 +18,6 @@ export const createfooterNavigation = (siteUrl: URL) =>
     explore: headerNavigation,
     elsewhere: [
       {
-        label: 'Analytics',
-        href: ENV.PUBLIC_UMAMI_SHARE_URL,
-      },
-      {
         label: 'RSS',
         href: new URL('rss.xml', siteUrl).href,
       },

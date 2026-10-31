@@ -33,7 +33,7 @@ const { title, description, ogImagePath, ogType = 'website' } = Astro.props
 <Favicon />
 <CanonicalLink />
 {ENV.IS_PRODUCTION && <Rss />}
-{!ENV.IS_LOCAL && <Analytics />}
+<!-- Analytics disabled -->
 {ENV.IS_PRODUCTION && <Sitemap />}
 <PreloadFonts type="sans" />
 <OpenGraph

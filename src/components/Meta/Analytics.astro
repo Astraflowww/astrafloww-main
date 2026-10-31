@@ -1,12 +1,4 @@
 ---
-import { ENV } from '@/config/env'
-
-const config = {
-  url: ENV.PUBLIC_UMAMI_SHARE_URL
-    ? `${ENV.PUBLIC_UMAMI_SHARE_URL}/script.js`
-    : 'https://a7s.hnzl.dev/script.js',
-  websiteId: ENV.PUBLIC_UMAMI_SITE_ID,
-} as const
 ---
 
-<script is:inline defer src={config.url} data-website-id={config.websiteId}></script>
+<!-- Analytics disabled for AstraFloww -->
