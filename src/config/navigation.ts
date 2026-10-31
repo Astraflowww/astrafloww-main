@@ -1,4 +1,3 @@
-import { ENV } from './env'
 import { ROUTES } from './routes'
 
 type Navigation = {
@@ -13,13 +12,8 @@ export const headerNavigation = [
   { href: ROUTES.blog._, label: 'Blog' },
 ] as const satisfies readonly Navigation[]
 
-export const createfooterNavigation = (siteUrl: URL) =>
+export const createfooterNavigation = () =>
   ({
     explore: headerNavigation,
-    elsewhere: [
-      {
-        label: 'RSS',
-        href: new URL('rss.xml', siteUrl).href,
-      },
-    ],
+    elsewhere: [],
   }) as const satisfies Record<string, readonly Navigation[]>

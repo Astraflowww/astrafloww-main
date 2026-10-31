@@ -35,13 +35,16 @@ const hasCustomMain = Astro.slots.has('main')
     <!-- Anti-FOUC: apply saved theme before any CSS renders -->
     <script is:inline>
       ;(function () {
-        var stored = null
+        let stored = null
         try {
           stored = localStorage.getItem('theme')
-        } catch (e) {}
-        var prefersDark =
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        } catch (_error) {
+          // Ignore error
+        }
+        const prefersDark =
           window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-        var theme =
+        const theme =
           stored === 'dark' || stored === 'light'
             ? stored
             : prefersDark

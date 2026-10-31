@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { writeFileSync, mkdirSync } from 'fs';
 import { createCanvas } from 'canvas';
 
@@ -36,23 +37,7 @@ const card = (ctx,x,y,w,h,accent) => {
   ctx.setLineDash([]); ctx.globalAlpha = 1;
 };
 
-const wrapText = (ctx,x,y,text,opts={}) => {
-  const { size=18, lineH=24, maxW=580, color='rgba(255,255,255,0.55)', opacity=1, font='400' } = opts;
-  ctx.textBaseline = 'alphabetic';
-  ctx.fillStyle = color; ctx.globalAlpha = opacity;
-  ctx.font = `${font} ${size}px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif`;
-  const words = text.split(' ');
-  let line = ''; let yy = y;
-  for (let n=0; n<words.length; n++){
-    const test = line ? line+' '+words[n] : words[n];
-    if (ctx.measureText(test).width > maxW && line){
-      ctx.fillText(line,x,yy); yy += lineH; line = words[n];
-    } else line = test;
-  }
-  ctx.fillText(line,x,yy);
-  ctx.globalAlpha = 1;
-  return yy;
-};
+
 
 const make = async (path,w,h,cb) => {
   const canvas = createCanvas(w,h);

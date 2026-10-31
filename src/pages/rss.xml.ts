@@ -2,7 +2,6 @@ import type { APIRoute } from 'astro'
 import { getCollection } from 'astro:content'
 import rss from '@astrojs/rss'
 
-import { ENV } from '@/config/env'
 import { ROUTES } from '@/config/routes'
 import { defaultSeo } from '@/config/seo'
 import { getSortedContentByDateDesc, shouldIncludeItem } from '@/lib/utils/content'

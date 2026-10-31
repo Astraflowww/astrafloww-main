@@ -3,9 +3,8 @@ import { Icon } from 'astro-icon/components'
 
 import { createfooterNavigation } from '@/config/navigation'
 import { cn } from '@/lib/utils/cn'
-import { ensureAstroSite } from '@/lib/utils/guards'
 
-const { explore, elsewhere } = createfooterNavigation(ensureAstroSite(Astro.site))
+const { explore, elsewhere } = createfooterNavigation()
 ---
 
 <nav aria-label="Footer navigation" class="grid grid-cols-2 gap-24">
