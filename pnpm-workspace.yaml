@@ -1,0 +1,14 @@
+# Security vulnerability overrides added by `pnpm audit --fix`.
+# Each entry forces a minimum safe version for a transitive dependency.
+# To review: run `pnpm audit` after upgrading direct deps — once upstream
+# packages pull in safe versions themselves, the relevant override can be removed.
+
+allowBuilds:
+  canvas: true
+  esbuild: true
+  sharp: true
+  workerd: true
+
+overrides:
+  tar: "^7.5.16"
+  yaml: "^2.8.3"

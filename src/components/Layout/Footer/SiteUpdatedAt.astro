@@ -1,0 +1,17 @@
+---
+import { formatDateHuman } from '@/lib/utils/date'
+
+const formattedLastUpdated = formatDateHuman(new Date(), {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+  hour: 'numeric',
+  minute: '2-digit',
+  timeZoneName: 'short',
+  hour12: false,
+})
+---
+
+<p class="text-base-content/60 text-xs">
+  Last updated by Devanshi Jaiswal on {formattedLastUpdated}
+</p>

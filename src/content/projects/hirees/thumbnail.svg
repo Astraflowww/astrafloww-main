@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Candidate Card -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Card shadow / sketch back -->
+    <rect x="74" y="94" width="340" height="350" rx="16" fill="var(--color-neutral)" opacity="0.3" transform="rotate(-1 244 269)"/>
+    <rect x="70" y="90" width="340" height="350" rx="16" fill="var(--color-base-100)" stroke="var(--color-base-content)" stroke-width="4"/>
+    
+    <!-- Candidate Avatar -->
+    <circle cx="140" cy="160" r="32" fill="var(--color-neutral)" opacity="0.4"/>
+    <circle cx="140" cy="160" r="32" fill="none" stroke="var(--color-base-content)" stroke-width="3.5"/>
+    <circle cx="140" cy="150" r="13" fill="var(--color-base-content)"/>
+    <path d="M120 180 c2-12 10-18 20-18 s18 6 20 18" fill="var(--color-base-content)"/>
+
+    <!-- Verification badge -->
+    <rect x="186" y="132" width="108" height="26" rx="13" fill="var(--color-success)" opacity="0.2"/>
+    <rect x="186" y="132" width="108" height="26" rx="13" fill="none" stroke="var(--color-success)" stroke-width="2"/>
+    <text x="240" y="149" font-family="Excalifont, sans-serif" font-size="13" font-weight="bold" fill="var(--color-success)" text-anchor="middle">✓ VERIFIED</text>
+
+    <!-- Candidate text details -->
+    <text x="186" y="180" font-family="Excalifont, sans-serif" font-size="20" font-weight="bold" fill="var(--color-base-content)">Candidate</text>
+    <path d="M110 216 h250" stroke="var(--color-base-content)" stroke-width="2.5" opacity="0.25" stroke-dasharray="4 4"/>
+
+    <!-- Skills tags -->
+    <rect x="110" y="240" width="70" height="28" rx="8" fill="var(--color-primary)" opacity="0.15"/>
+    <rect x="110" y="240" width="70" height="28" rx="8" fill="none" stroke="var(--color-primary)" stroke-width="2"/>
+    <text x="145" y="259" font-family="Excalifont, sans-serif" font-size="14" fill="var(--color-primary)" text-anchor="middle">React</text>
+
+    <rect x="190" y="240" width="56" height="28" rx="8" fill="var(--color-primary)" opacity="0.15"/>
+    <rect x="190" y="240" width="56" height="28" rx="8" fill="none" stroke="var(--color-primary)" stroke-width="2"/>
+    <text x="218" y="259" font-family="Excalifont, sans-serif" font-size="14" fill="var(--color-primary)" text-anchor="middle">Vite</text>
+
+    <rect x="256" y="240" width="94" height="28" rx="8" fill="var(--color-primary)" opacity="0.15"/>
+    <rect x="256" y="240" width="94" height="28" rx="8" fill="none" stroke="var(--color-primary)" stroke-width="2"/>
+    <text x="303" y="259" font-family="Excalifont, sans-serif" font-size="14" fill="var(--color-primary)" text-anchor="middle">Tailwind</text>
+
+    <rect x="110" y="280" width="86" height="28" rx="8" fill="var(--color-primary)" opacity="0.15"/>
+    <rect x="110" y="280" width="86" height="28" rx="8" fill="none" stroke="var(--color-primary)" stroke-width="2"/>
+    <text x="153" y="299" font-family="Excalifont, sans-serif" font-size="14" fill="var(--color-primary)" text-anchor="middle">shadcn/ui</text>
+
+    <rect x="206" y="280" width="78" height="28" rx="8" fill="var(--color-primary)" opacity="0.15"/>
+    <rect x="206" y="280" width="78" height="28" rx="8" fill="none" stroke="var(--color-primary)" stroke-width="2"/>
+    <text x="245" y="299" font-family="Excalifont, sans-serif" font-size="14" fill="var(--color-primary)" text-anchor="middle">Vercel</text>
+
+    <!-- Tracking state bar -->
+    <rect x="110" y="340" width="260" height="42" rx="10" fill="var(--color-neutral)" opacity="0.2"/>
+    <rect x="110" y="340" width="260" height="42" rx="10" fill="none" stroke="var(--color-base-content)" stroke-width="2"/>
+    <circle cx="132" cy="361" r="7" fill="var(--color-success)"/>
+    <text x="150" y="366" font-family="Excalifont, sans-serif" font-size="15" fill="var(--color-base-content)">Shortlisted · Real-time</text>
+  </g>
+
+  <!-- Central Match Element / Connector -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M410 265 Q480 230 540 265" fill="none" stroke="var(--color-primary)" stroke-width="4" stroke-dasharray="6 6"/>
+    <path d="M532 255 L545 265 L533 275" fill="none" stroke="var(--color-primary)" stroke-width="4"/>
+    
+    <!-- AI Match Pill -->
+    <g transform="translate(480, 200)">
+      <rect x="-70" y="-24" width="140" height="48" rx="24" fill="var(--color-primary)" opacity="0.2"/>
+      <rect x="-70" y="-24" width="140" height="48" rx="24" fill="none" stroke="var(--color-primary)" stroke-width="3"/>
+      <text x="0" y="6" font-family="Excalifont, sans-serif" font-size="16" font-weight="bold" fill="var(--color-primary)" text-anchor="middle">✦ 98% MATCH</text>
+    </g>
+
+    <!-- Bi-directional indicator -->
+    <path d="M540 285 Q480 320 420 285" fill="none" stroke="var(--color-base-content)" stroke-width="3" opacity="0.4" stroke-dasharray="5 5"/>
+    <path d="M428 295 L415 285 L427 275" fill="none" stroke="var(--color-base-content)" stroke-width="3" opacity="0.4"/>
+  </g>
+
+  <!-- Recruiter / Job Card -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Card shadow / sketch back -->
+    <rect x="554" y="94" width="340" height="350" rx="16" fill="var(--color-neutral)" opacity="0.3" transform="rotate(1 724 269)"/>
+    <rect x="550" y="90" width="340" height="350" rx="16" fill="var(--color-base-100)" stroke="var(--color-base-content)" stroke-width="4"/>
+
+    <!-- Employer verification badge -->
+    <rect x="590" y="132" width="108" height="26" rx="13" fill="var(--color-success)" opacity="0.2"/>
+    <rect x="590" y="132" width="108" height="26" rx="13" fill="none" stroke="var(--color-success)" stroke-width="2"/>
+    <text x="644" y="149" font-family="Excalifont, sans-serif" font-size="13" font-weight="bold" fill="var(--color-success)" text-anchor="middle">✓ VERIFIED</text>
+
+    <!-- Job Title & Company -->
+    <text x="590" y="185" font-family="Excalifont, sans-serif" font-size="22" font-weight="bold" fill="var(--color-base-content)">Recruiter Portal</text>
+    <text x="590" y="210" font-family="Excalifont, sans-serif" font-size="15" fill="var(--color-primary)">Hirees · Astrafloww</text>
+    
+    <path d="M590 226 h260" stroke="var(--color-base-content)" stroke-width="2.5" opacity="0.25" stroke-dasharray="4 4"/>
+
+    <!-- Dashboard indicators -->
+    <rect x="590" y="248" width="120" height="58" rx="10" fill="var(--color-neutral)" opacity="0.2"/>
+    <rect x="590" y="248" width="120" height="58" rx="10" fill="none" stroke="var(--color-base-content)" stroke-width="2"/>
+    <text x="605" y="272" font-family="Excalifont, sans-serif" font-size="13" opacity="0.7" fill="var(--color-base-content)">Active Openings</text>
+    <text x="605" y="296" font-family="Excalifont, sans-serif" font-size="20" font-weight="bold" fill="var(--color-primary)">14 Jobs</text>
+
+    <rect x="724" y="248" width="126" height="58" rx="10" fill="var(--color-neutral)" opacity="0.2"/>
+    <rect x="724" y="248" width="126" height="58" rx="10" fill="none" stroke="var(--color-base-content)" stroke-width="2"/>
+    <text x="739" y="272" font-family="Excalifont, sans-serif" font-size="13" opacity="0.7" fill="var(--color-base-content)">Applicants</text>
+    <text x="739" y="296" font-family="Excalifont, sans-serif" font-size="20" font-weight="bold" fill="var(--color-success)">128 Live</text>
+
+    <!-- Action Bar -->
+    <rect x="590" y="340" width="260" height="42" rx="10" fill="var(--color-primary)" opacity="0.15"/>
+    <rect x="590" y="340" width="260" height="42" rx="10" fill="none" stroke="var(--color-primary)" stroke-width="2"/>
+    <text x="720" y="366" font-family="Excalifont, sans-serif" font-size="16" font-weight="bold" fill="var(--color-primary)" text-anchor="middle">Dashboard &amp; Pipeline</text>
+  </g>
+
+  <!-- Sparkles / Details -->
+  <g stroke="var(--color-primary)" stroke-width="2.5" fill="none">
+    <path d="M472 80 L472 96 M464 88 L480 88"/>
+    <path d="M495 120 L495 130 M490 125 L500 125"/>
+    <path d="M465 440 L465 454 M458 447 L472 447"/>
+  </g>
+</svg>

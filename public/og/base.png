@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" text-rendering="geometricPrecision" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6c5ce7"/>
+      <stop offset="1" stop-color="#fd79a8"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#ffffff" fill-opacity="0.10"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#0b0b12"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+  <rect x="50" y="50" width="1100" height="530" rx="18" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2"/>
+  <rect x="80" y="120" width="300" height="420" rx="16" fill="#0f0f1a" stroke="#ffffff" stroke-opacity="0.10" stroke-width="1.5"/>
+  <rect x="100" y="140" width="260" height="56" rx="8" fill="url(#g)"/>
+  <text x="130" y="173" fill="#ffffff" font-size="18" font-weight="700">GLOBAL IMMERSION</text>
+  <text x="130" y="320" fill="#ffffff" fill-opacity="0.85" font-size="15">Culture Flow —</text>
+  <text x="130" y="345" fill="#ffffff" fill-opacity="0.85" font-size="15">Engineering a Global</text>
+  <text x="130" y="370" fill="#ffffff" fill-opacity="0.85" font-size="15">Academic Immersion</text>
+  <text x="130" y="395" fill="#ffffff" fill-opacity="0.85" font-size="15">Platform</text>
+  <text x="130" y="440" fill="#ffffff" fill-opacity="0.55" font-size="13">AstraFloww</text>
+  <text x="130" y="500" fill="#ffffff" fill-opacity="0.35" font-size="12">Next.js 16 · React · Tailwind · Swiper</text>
+  <text x="500" y="200" fill="#ffffff" font-size="56" font-weight="800">Culture Flow</text>
+  <text x="500" y="270" fill="#ffffff" fill-opacity="0.8" font-size="26">Engineering a Global Academic</text>
+  <text x="500" y="305" fill="#ffffff" fill-opacity="0.8" font-size="26">Immersion Platform</text>
+  <text x="500" y="360" fill="#ffffff" fill-opacity="0.55" font-size="18">Structured international academic mobility for ambitious Indian scholars.</text>
+  <text x="500" y="410" fill="#ffffff" fill-opacity="0.55" font-size="18">Next.js 16 · React · JavaScript · Node.js ·</text>
+  <text x="500" y="435" fill="#ffffff" fill-opacity="0.55" font-size="18">Tailwind CSS · Swiper · Webpack · Vercel · PWA</text>
+  <text x="500" y="475" fill="#ffffff" fill-opacity="0.45" font-size="15">2026 · New Delhi</text>
+  <text x="820" y="540" fill="#ffffff" fill-opacity="0.55" font-size="17" font-weight="700">cultureflow.in</text>
+</svg>

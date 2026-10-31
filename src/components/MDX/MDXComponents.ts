@@ -1,0 +1,22 @@
+import Alert from '@/components/ui/Alert/Alert.astro'
+import Figure from '@/components/ui/Figure.astro'
+import H1 from '@/components/ui/Heading/H1.astro'
+import H2 from '@/components/ui/Heading/H2.astro'
+import H3 from '@/components/ui/Heading/H3.astro'
+import H4 from '@/components/ui/Heading/H4.astro'
+import H5 from '@/components/ui/Heading/H5.astro'
+import H6 from '@/components/ui/Heading/H6.astro'
+import Link from '@/components/ui/Link.astro'
+
+export const mdxComponents = {
+  a: Link,
+  Alert,
+  Figure,
+  Link,
+  h1: H1,
+  h2: H2,
+  h3: H3,
+  h4: H4,
+  h5: H5,
+  h6: H6,
+}

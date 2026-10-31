@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9e7b3"/>
+      <stop offset="1" stop-color="#f3d27a"/>
+    </linearGradient>
+    <linearGradient id="dark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b2a1a"/>
+      <stop offset="1" stop-color="#241a10"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8c46a"/>
+      <stop offset="1" stop-color="#c99a3b"/>
+    </linearGradient>
+    <linearGradient id="rose" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e88db5"/>
+      <stop offset="0.5" stop-color="#c85a7f"/>
+      <stop offset="1" stop-color="#a13a5e"/>
+    </linearGradient>
+    <radialGradient id="ovenglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff2cf" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#ffd27a" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffd27a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <circle cx="320" cy="320" r="360" fill="url(#bg)"/>
+  <circle cx="320" cy="320" r="360" fill="#f3d27a" fill-opacity="0.35"/>
+
+  <g stroke="#8a5a2a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.32">
+    <path d="M120 210 H520 M160 280 H480 M200 350 H440 M240 420 H400"/>
+    <path d="M120 210 V460 M520 210 V460"/>
+  </g>
+
+  <g transform="translate(86 120)" stroke="#7a4a22" stroke-width="5" fill="url(#rose)">
+    <path d="M130 46 C118 46 110 39 110 26 C110 13 117 8 128 8 L132 8 C142 8 148 13 148 20 C148 26 146 28 146 28 C152 40 154 54 148 66 C157 67 166 68 176 68 C191 68 204 56 204 41 C204 27 194 15 180 15 C168 15 159 24 156 33" fill="url(#rose)"/>
+    <path d="M130 70 H130 M110 210 H150" opacity="0"/>
+  </g>
+  <g transform="translate(140 150)" stroke="#7a4a22" stroke-width="5" fill="url(#rose)">
+    <path d="M110 34 C99 34 92 27 92 15 C92 4 98 0 108 0 L111 0 C120 0 125 4 125 11 C125 17 123 19 123 19 C128 29 130 41 125 51 C133 52 141 53 149 53 C164 53 176 42 176 29 C176 17 166 6 153 6 C142 6 134 13 132 21" fill="url(#rose)"/>
+  </g>
+  <g transform="translate(156 218)" stroke="#7a4a22" stroke-width="5" fill="url(#rose)">
+    <path d="M100 28 C90 28 83 22 83 11 C83 1 89 -3 98 -3 L101 -3 C109 -3 114 1 114 7 C114 12 112 14 112 14 C116 23 118 33 114 42 C121 43 128 44 135 44 C148 44 160 34 160 22 C160 11 151 1 139 1 C129 1 121 7 119 14" fill="url(#rose)"/>
+  </g>
+  <g transform="translate(172 278)" stroke="#7a4a22" stroke-width="5" fill="url(#rose)">
+    <path d="M90 22 C81 22 74 16 74 6 C74 -4 80 -8 89 -8 L92 -8 C100 -8 105 -4 105 1 C105 6 103 8 103 8 C107 16 109 25 105 33 C112 34 118 35 124 35 C136 35 147 26 147 15 C147 5 139 -3 128 -3 C119 -3 111 3 109 9" fill="url(#rose)"/>
+  </g>
+
+  <g transform="translate(124 352)" stroke="#7a4a22" stroke-width="5" fill="url(#gold)">
+    <path d="M88 20 C78 20 72 14 72 5 C72 -4 78 -9 87 -9 L90 -9 C98 -9 103 -4 103 1 C103 7 101 9 101 9 C105 18 107 28 103 36 C111 37 117 38 122 38 C134 38 145 28 145 17 C145 7 136 -2 125 -2 C116 -2 108 4 107 11" fill="url(#gold)"/>
+  </g>
+  <g transform="translate(172 278)">
+    <rect x="122" y="36" width="160" height="30" rx="8" fill="#3b2a1a"/>
+    <rect x="134" y="44" width="90" height="6" rx="3" fill="#d9b25c"/>
+    <rect x="134" y="54" width="60" height="4" rx="2" fill="#7a4a22"/>
+  </g>
+
+  <g transform="translate(152 430)">
+    <rect x="0" y="0" width="336" height="100" rx="18" fill="url(#dark)"/>
+    <rect x="14" y="16" width="308" height="70" rx="12" fill="url(#ovenglow)"/>
+    <circle cx="166" cy="51" r="30" fill="#000" fill-opacity="0.10"/>
+    <path d="M120 46 A46 46 0 0 1 212 46" stroke="#e8c46a" stroke-width="6" fill="none" opacity="0.85"/>
+    <circle cx="166" cy="51" r="30" fill="none" stroke="#fff2cf" stroke-width="3" opacity="0.75"/>
+    <path d="M166 21 L166 31 M156 31 L176 31" stroke="#3b2a1a" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="112" cy="58" r="14" fill="url(#rose)"/>
+    <path d="M180 58 L220 58" stroke="#e8c46a" stroke-width="4" stroke-linecap="round"/>
+    <path d="M180 66 L210 66" stroke="#7a4a22" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(152 546)" stroke="#3b2a1a" stroke-width="5" fill="none">
+    <rect x="0" y="0" width="336" height="56" rx="12" fill="#3b2a1a"/>
+    <path d="M18 28 H156" stroke="#f3d27a" stroke-width="6" stroke-linecap="round"/>
+    <path d="M200 22 V34 M208 18 V38 M220 20 V32 M228 18 V36 M240 22 V32" stroke="#f3d27a" stroke-width="4" stroke-linecap="round"/>
+    <path d="M260 22 V34 M268 18 V38 M280 20 V32 M288 18 V36 M300 22 V32" stroke="#f3d27a" stroke-width="4" stroke-linecap="round"/>
+    <path d="M18 20 L318 20" stroke="#7a4a22" stroke-width="3" opacity="0.6"/>
+  </g>
+
+  <text x="320" y="386" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="700" fill="#3b2a1a" letter-spacing="3">LUXURY SALON</text>
+</svg>

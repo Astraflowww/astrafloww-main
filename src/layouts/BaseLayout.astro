@@ -1,0 +1,94 @@
+---
+import Footer from '@/components/Layout/Footer.astro'
+import Header from '@/components/Layout/Header.astro'
+import Head from '@/components/Meta/Head.astro'
+import SkipLink from '@/components/ui/SkipLink.astro'
+import { defaultSeo } from '@/config/seo'
+import { cn } from '@/lib/utils/cn'
+import { resolveOgImageUrl } from '@/lib/utils/og'
+
+import '@/styles/fonts.css'
+import '@/styles/global.css'
+
+type Props = {
+  pageTitle?: string
+  pageDescription?: string
+  ogType?: 'website' | 'article'
+}
+
+const {
+  pageTitle = defaultSeo.baseTitle,
+  pageDescription = defaultSeo.metaDescription,
+  ogType = 'website',
+} = Astro.props
+
+const pathname = Astro.url.pathname
+const params = Astro.params
+
+const ogImageUrl = resolveOgImageUrl({ params, pathname })
+
+const hasCustomMain = Astro.slots.has('main')
+---
+
+<html lang="en">
+  <head>
+    <!-- Anti-FOUC: apply saved theme before any CSS renders -->
+    <script is:inline>
+      ;(function () {
+        var stored = null
+        try {
+          stored = localStorage.getItem('theme')
+        } catch (e) {}
+        var prefersDark =
+          window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        var theme =
+          stored === 'dark' || stored === 'light'
+            ? stored
+            : prefersDark
+              ? 'dark'
+              : 'light'
+        document.documentElement.dataset.theme =
+          theme === 'dark' ? 'custom-dark' : 'custom-light'
+      })()
+    </script>
+    <Head
+      title={pageTitle}
+      description={pageDescription}
+      ogImagePath={ogImageUrl}
+      ogType={ogType}
+    >
+      <slot name="head" />
+    </Head>
+  </head>
+
+  <body>
+    <SkipLink />
+    <Header />
+
+    {hasCustomMain ? (
+      // Page owns the whole main area (e.g., ReadingLayout with main+aside)
+      <slot name="main" />
+    ) : (
+      // Fallback: wrap default content in a semantic <main>
+      <main
+        id="main-content"
+        tabindex="-1"
+        class={cn(
+          'mx-auto max-w-6xl scroll-mt-[calc(var(--header-h)+1.25rem)] px-5 pb-40',
+          'focus:outline-none',
+          'md:px-8',
+        )}
+      >
+        <slot name="beforeContent" />
+        <slot />
+        <slot name="afterContent" />
+      </main>
+    )}
+
+    <Footer />
+
+    <slot name="endOfBody" />
+
+    <script src="@/lib/thumbnail-transitions.ts"></script>
+  </body>
+</html>

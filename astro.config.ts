@@ -1,0 +1,45 @@
+import { unified } from '@astrojs/markdown-remark'
+import mdx from '@astrojs/mdx'
+import preact from '@astrojs/preact'
+import sitemap from '@astrojs/sitemap'
+import tailwindcss from '@tailwindcss/vite'
+import icon from 'astro-icon'
+import { defineConfig } from 'astro/config'
+import sectionize from 'remark-sectionize'
+import { loadEnv } from 'vite'
+
+import { envConfig } from './env.config.ts'
+import { remarkReadingTime } from './plugins/remark-reading-time'
+
+const { SITE_URL, ENV_NAME } = loadEnv('', process.cwd(), '')
+
+// https://astro.build/config
+export default defineConfig({
+  env: envConfig,
+  site: SITE_URL ?? 'http://localhost:4321',
+  prefetch: true,
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  integrations: [
+    preact(),
+    mdx(),
+    icon(),
+    (ENV_NAME ?? 'staging') === 'production' && sitemap({ lastmod: new Date() }),
+  ],
+  trailingSlash: 'never',
+  markdown: {
+    syntaxHighlight: {
+      type: 'shiki',
+    },
+    shikiConfig: {
+      themes: {
+        light: 'catppuccin-latte',
+        dark: 'catppuccin-mocha',
+      },
+    },
+    processor: unified({
+      remarkPlugins: [sectionize, remarkReadingTime],
+    }),
+  },
+})

@@ -1,0 +1,84 @@
+---
+const sectionId = 'hero'
+---
+
+<section
+  aria-labelledby={sectionId}
+  class="relative py-20 sm:py-28 md:py-32 flex flex-col justify-center select-none"
+>
+  <div class="max-w-[1440px] mx-auto w-full">
+    <!-- Top Studio Eyebrow -->
+    <div class="flex items-center gap-3 mb-6 sm:mb-8">
+      <span class="w-2 h-2 rounded-full bg-[var(--signal-pink)] animate-pulse"></span>
+      <span class="font-mono text-xs uppercase tracking-[0.25em] text-[var(--signal-pink)] font-semibold">
+        Est. 2026 // Bespoke Software Studio
+      </span>
+      <span class="hidden sm:inline-block text-[var(--azure-white)] font-mono text-xs">
+        /
+      </span>
+      <span class="hidden sm:inline-block font-mono text-xs uppercase tracking-widest text-[var(--ink-muted)]">
+        Full-Cycle Engineering &amp; Architecture
+      </span>
+    </div>
+
+    <!-- Monumental Headline -->
+    <h1
+      id={sectionId}
+      class="font-sans font-black text-5xl sm:text-7xl md:text-8xl xl:text-[100px] text-[var(--ink)] tracking-tighter leading-[0.92] uppercase mb-8"
+    >
+      ARCHITECTING
+      <br />
+      <span class="text-[var(--signal-pink)]">ENDURING</span>
+      <br />
+      <span class="font-serif italic font-normal text-4xl sm:text-6xl md:text-7xl xl:text-[88px] tracking-normal text-[var(--ink)] lowercase">
+        software systems.
+      </span>
+    </h1>
+
+    <!-- Editorial Subheading & Manifesto -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pt-4 pb-12 border-b border-[var(--azure-white)]/80">
+      <p class="lg:col-span-7 text-base sm:text-lg md:text-xl text-[var(--ink-muted)] leading-relaxed font-sans max-w-2xl">
+        I transform software from an operational cost into a competitive moat. We engineer
+        resilient cloud-native platforms, AI surveillance systems, and high-velocity web
+        architectures with institutional rigour from day one.
+      </p>
+
+      <div class="lg:col-span-5 flex flex-wrap gap-4 lg:justify-end items-center">
+        <a
+          href="#projects"
+          class="px-8 py-4 rounded-full bg-[var(--signal-pink)] text-white text-xs font-mono uppercase tracking-widest font-semibold hover:bg-[#6c5ce7] transition-all shadow-lg hover:shadow-xl flex items-center gap-3 cursor-pointer group"
+        >
+          <span>Explore Projects</span>
+          <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </a>
+        <a
+          href="#contact"
+          class="px-8 py-4 rounded-full bg-[var(--ink)] text-[var(--cloud-white)] text-xs font-mono uppercase tracking-widest font-semibold hover:bg-[var(--signal-pink)] hover:text-white transition-all shadow-md flex items-center gap-3 cursor-pointer"
+        >
+          <span>Inquire Now</span>
+          <span>&darr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Disciplines Ticker Bar -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 text-xs font-mono text-[var(--ink-muted)] uppercase tracking-wider">
+      <div class="flex items-center gap-2">
+        <span class="text-[var(--signal-pink)] font-bold">01</span>
+        <span>Cloud-Native Scaling</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-[var(--signal-pink)] font-bold">02</span>
+        <span>AI &amp; Threat Defense</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-[var(--signal-pink)] font-bold">03</span>
+        <span>Zero Tech-Debt Codebases</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-[var(--signal-pink)] font-bold">04</span>
+        <span>Fixed Sprint Velocity</span>
+      </div>
+    </div>
+  </div>
+</section>

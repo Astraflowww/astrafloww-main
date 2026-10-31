@@ -1,0 +1,52 @@
+---
+import { Icon } from 'astro-icon/components'
+
+import { createfooterNavigation } from '@/config/navigation'
+import { cn } from '@/lib/utils/cn'
+import { ensureAstroSite } from '@/lib/utils/guards'
+
+const { explore, elsewhere } = createfooterNavigation(ensureAstroSite(Astro.site))
+---
+
+<nav aria-label="Footer navigation" class="grid grid-cols-2 gap-24">
+  <div>
+    <p class="mb-3">Explore</p>
+    <ul class="space-y-3">
+      {explore.map(({ label, href }) => (
+        <li>
+          <a
+            href={href}
+            class={cn(
+              'text-base-content/75 inline-flex items-center gap-1 rounded-sm text-sm transition-colors duration-200',
+              'hover:text-base-content',
+              'link-outline',
+            )}
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+  <div>
+    <p class="mb-3">Elsewhere</p>
+    <ul class="space-y-3">
+      {elsewhere.map(({ label, href }) => (
+        <li>
+          <a
+            href={href}
+            class={cn(
+              'text-base-content/75 inline-flex items-center gap-1 rounded-sm text-sm transition-colors duration-200',
+              'hover:text-base-content',
+              'link-outline',
+            )}
+            target="_blank"
+            rel="noopener"
+          >
+            {label} <Icon class="size-3" name="lucide:arrow-up-right" />
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>

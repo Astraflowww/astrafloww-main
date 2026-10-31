@@ -1,0 +1,28 @@
+---
+import ArticleCard from '@/components/Content/ArticleCard.astro'
+import { ROUTES } from '@/config/routes'
+import type { Post } from '@/lib/types'
+
+import ContentGrid from './ContentGrid/ContentGrid.astro'
+
+type Props = {
+  posts: readonly Post[]
+  className?: string
+  isAboveFold?: boolean
+}
+
+const { posts, className } = Astro.props
+---
+
+<ContentGrid type="article" className={className}>
+  {posts.map((post) => (
+    <ArticleCard
+      title={post.data.title}
+      description={post.data.description}
+      targetUrl={ROUTES.blog.post(post.id)}
+      createdAt={post.data.createdAt}
+      slug={post.id}
+      tags={post.data.tags}
+    />
+  ))}
+</ContentGrid>

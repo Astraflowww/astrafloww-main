@@ -1,0 +1,48 @@
+---
+import { cn } from '@/lib/utils/cn'
+
+import KbClub from './Footer/512kbClub.astro'
+import Copyright from './Footer/Copyright.astro'
+import Navigation from './Footer/Navigation.astro'
+import SiteUpdatedAt from './Footer/SiteUpdatedAt.astro'
+import SocialLinks from './Footer/SocialLinks.astro'
+import ThemeSwitcher from './Footer/ThemeSwitcher.astro'
+---
+
+<div class="divider m-0 h-px"></div>
+
+<footer class={cn('pt-16 pb-8', 'lg:pb-16')}>
+  <div class={cn('mx-auto max-w-6xl px-5', 'md:px-8')}>
+    <div
+      class={cn(
+        'flex flex-col-reverse items-stretch justify-between gap-y-16',
+        'md:flex-row',
+      )}
+    >
+      <div class={cn('flex flex-col gap-y-12', 'md:gap-y-20')}>
+        <div class="space-y-3">
+          <p class="text-lg font-bold uppercase tracking-tight text-[var(--ink)]">
+            Astra<span class="text-[var(--signal-pink)]">Floww</span>
+          </p>
+          <p class="text-base-content/75 max-w-64 text-sm">
+            Bespoke Software Studio — Full-Cycle Engineering & Cloud Architectures.
+          </p>
+        </div>
+        <div class="space-y-5">
+          <div class="flex items-center justify-between gap-4">
+            <SocialLinks />
+            <ThemeSwitcher />
+          </div>
+          <Copyright />
+        </div>
+      </div>
+      <div class={cn('flex flex-col-reverse justify-between gap-y-8', 'md:flex-col')}>
+        <Navigation />
+        <div class="grid gap-y-3">
+          <SiteUpdatedAt />
+          <KbClub />
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

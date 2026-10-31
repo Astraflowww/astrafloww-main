@@ -1,0 +1,209 @@
+---
+import { cn } from '@/lib/utils/cn'
+
+type Project = {
+  id: string
+  title: string
+  subtitle: string
+  category: string
+  url: string
+  caseStudyUrl?: string
+  description: string
+  stats?: string
+  image?: string
+}
+
+const PROJECTS: Project[] = [
+  {
+    id: 'cultureflow',
+    title: 'CULTURE FLOW',
+    subtitle: 'Global Academic Immersion Platform',
+    category: 'Next.js 16 · Academic Mobility',
+    url: 'https://cultureflow.in',
+    caseStudyUrl: '/projects/cultureflow',
+    description:
+      'Structured academic immersion platform connecting ambitious Indian scholars with global learning environments across Tech & Innovation, Sustainability, and Heritage tracks.',
+    stats: 'Inaugural 2027 Cohort',
+    image: '/images/projects/cultureflow/hero-leaders.png',
+  },
+  {
+    id: 'zsure',
+    title: 'ZSURE DEFENSE',
+    subtitle: 'AI Threat & Voice Clone Prevention',
+    category: 'AI Software Engineering',
+    url: 'https://zsure.in',
+    description:
+      'Enterprise deepfake and automated fraud detection platform engineered to neutralize AI impersonation attacks before financial damage spreads.',
+    stats: 'Sub-100ms detection latency',
+    image: '/images/platform-mockup.jpg',
+  },
+  {
+    id: 'hypotenuse',
+    title: 'HYPOTENUSE ANALYTICS',
+    subtitle: 'Mission-Critical Surveillance Infrastructure',
+    category: 'Enterprise Software Platform',
+    url: 'https://hypotenuseanalytics.com',
+    description:
+      'High-throughput surveillance systems and real-time telemetry processing built for large-scale enterprise deployments.',
+    stats: '99.999% SLA Uptime',
+    image: '/images/hero-software.jpg',
+  },
+]
+
+type Props = {
+  className?: string
+}
+
+const { className } = Astro.props
+---
+
+<section
+  id="projects"
+  class={cn(
+    'w-full bg-[var(--paper)] py-20 px-4 sm:px-10 md:px-16 border-t border-[var(--azure-white)] rounded-3xl',
+    className,
+  )}
+>
+  <div class="max-w-[1440px] mx-auto">
+    <!-- Section Header -->
+    <div class="flex flex-col gap-4 mb-12">
+      <span class="font-mono text-xs uppercase tracking-widest font-semibold text-[var(--signal-pink)]">
+        // FEATURED PROJECTS
+      </span>
+      <div class="flex items-center gap-3">
+        <span class="text-[10px] font-mono text-[var(--ink-muted)] uppercase tracking-wider">
+          Selected work &mdash; ongoing case studies
+        </span>
+        <a
+          href="/projects"
+          class="ml-auto text-xs font-mono text-[var(--ink-muted)] hover:text-[var(--signal-pink)] transition-colors underline underline-offset-4 decoration-[var(--signal-pink)]/40 hover:decoration-[var(--signal-pink)]"
+        >
+          SEE ALL PROJECTS &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Three Featured Projects — stacked one below the other, featured card style -->
+    <div class="flex flex-col gap-5">
+      {PROJECTS.map((project, index) => (
+        <article
+          class="group relative rounded-2xl border border-[var(--azure-white)]/60 bg-[var(--paper)] p-6 sm:p-7 hover:border-[var(--signal-pink)] hover:shadow-lg transition-all duration-300 card-shadow"
+          style={`view-transition-name: project-hero-${index + 1}`}
+        >
+          <div class="flex items-start gap-5">
+            <!-- Small side image -->
+            {project.image && (
+              <div class="relative flex-shrink-0 w-[88px] sm:w-[110px] h-[70px] sm:h-[85px] overflow-hidden rounded-lg bg-[var(--ink)]">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-90"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 rounded-lg ring-1 ring-inset ring-[var(--azure-white)]/20 group-hover:ring-[var(--signal-pink)]/40 transition-colors"></div>
+              </div>
+            )}
+
+            <!-- Content -->
+            <div class="flex-1 min-w-0">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <span class="text-[10px] font-mono text-[var(--signal-pink)] uppercase tracking-wider font-semibold">
+                    {project.category}
+                  </span>
+                  <h3 class="font-display font-black text-2xl sm:text-3xl tracking-tight text-[var(--ink)] uppercase mt-1">
+                    {project.title}
+                  </h3>
+                  <p class="text-xs font-mono text-[var(--ink-muted)] uppercase tracking-wider mt-0.5">
+                    {project.subtitle}
+                  </p>
+                </div>
+                {project.stats && (
+                  <span class="flex-shrink-0 px-2.5 py-1 rounded-full bg-[var(--signal-pink)]/10 border border-[var(--signal-pink)]/20 text-[10px] font-mono text-[var(--signal-pink)] font-semibold">
+                    {project.stats}
+                  </span>
+                )}
+              </div>
+
+              <p class="text-sm text-[var(--ink)]/70 line-clamp-2 font-sans mt-2.5 max-w-2xl">
+                {project.description}
+              </p>
+
+              <div class="flex items-center gap-3 mt-4 flex-wrap">
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[var(--signal-pink)] text-white text-[11px] font-mono uppercase tracking-wider font-semibold hover:bg-[#6c5ce7] transition-colors shadow-sm group-hover:scale-105"
+                >
+                  Live Site
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="group-hover:translate-x-0.5 transition-transform"
+                  >
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+                {project.caseStudyUrl && (
+                  <a
+                    href={project.caseStudyUrl}
+                    class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[var(--azure-white)]/50 text-[var(--ink-muted)] text-[11px] font-mono uppercase tracking-wider hover:border-[var(--signal-pink)] hover:text-[var(--signal-pink)] transition-colors group-hover:scale-105"
+                  >
+                    Case Study
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="group-hover:translate-x-0.5 transition-transform"
+                    >
+                      <path d="M4 10a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2Z" />
+                      <path d="M4 14a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2Z" />
+                    </svg>
+                  </a>
+                )}
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open ${project.title}`}
+                  class="ml-auto flex-shrink-0 w-9 h-9 rounded-full border border-[var(--azure-white)]/40 flex items-center justify-center text-[var(--signal-pink)] hover:bg-[var(--signal-pink)] hover:text-white transition-colors group-hover:scale-105"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                  >
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Decorative accent line -->
+          <div class="absolute left-6 sm:left-7 top-6 sm:top-7 bottom-6 sm:top-7 w-px bg-[var(--azure-white)]/30 group-hover:bg-[var(--signal-pink)]/50 transition-colors"></div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

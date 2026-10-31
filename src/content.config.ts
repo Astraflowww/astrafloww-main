@@ -1,0 +1,45 @@
+import { defineCollection } from 'astro:content'
+import { glob } from 'astro/loaders'
+import { z } from 'astro/zod'
+
+import { TECHNOLOGY_SLUGS } from '@/lib/technologies'
+
+const blogCollection = defineCollection({
+  loader: glob({
+    // Allow work-in-progress .md notes prefixed with _ colocated to the article file
+    pattern: ['**/*.{mdx,md}', '!**/_*.{mdx,md}'],
+    base: './src/content/blog',
+  }),
+  schema: () =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      createdAt: z.date(),
+      updatedAt: z.date().optional(),
+      isDraft: z.boolean().optional().default(false),
+      isFeatured: z.boolean().optional().default(false),
+      category: z.enum(['dev', 'beyond']).optional().default('dev'),
+      tags: z.array(z.string()).optional(),
+    }),
+})
+
+const projectsCollection = defineCollection({
+  loader: glob({ pattern: '**/*.{mdx,md}', base: './src/content/projects' }),
+  schema: () =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      createdAt: z.date(),
+      updatedAt: z.date().optional(),
+      isDraft: z.boolean().optional().default(false),
+      isFeatured: z.boolean().optional().default(false),
+      technologies: z.array(z.enum(TECHNOLOGY_SLUGS)),
+      githubUrl: z.url().optional(),
+      demoUrl: z.url().optional(),
+    }),
+})
+
+export const collections = {
+  blog: blogCollection,
+  projects: projectsCollection,
+}

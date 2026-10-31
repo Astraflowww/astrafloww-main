@@ -1,0 +1,19 @@
+---
+import AboutSection from '@/components/Homepage/sections/About/AboutSection.astro'
+import BlogSection from '@/components/Homepage/sections/Blog/BlogSection.astro'
+import ContactSection from '@/components/Homepage/sections/Contact/ContactSection.astro'
+import HeroSection from '@/components/Homepage/sections/Hero/HeroSection.astro'
+import ProjectsSection from '@/components/Homepage/sections/Projects/ProjectsSection.astro'
+import { defaultSeo } from '@/config/seo'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+
+const homepageTitle = 'Bespoke Software Studio & Elite Engineering'
+---
+
+<BaseLayout pageTitle={defaultSeo.pageTitle(homepageTitle)}>
+  <HeroSection />
+  <AboutSection className="mb-24 sm:mb-32" />
+  <ProjectsSection className="mb-24 sm:mb-32" />
+  <BlogSection className="mb-24 sm:mb-32" />
+  <ContactSection />
+</BaseLayout>

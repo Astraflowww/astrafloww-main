@@ -1,0 +1,12 @@
+---
+import { createPersonSchema, createWebsiteSchema } from '@/config/schemaJson'
+import { ensureAstroSite } from '@/lib/utils/guards'
+
+import BaseStructuredData from './Base.astro'
+
+const siteUrl = ensureAstroSite(Astro.site)
+---
+
+<!-- SCHEMA.ORG STRUCTURED DATA -->
+<BaseStructuredData schema={createWebsiteSchema(siteUrl)} />
+<BaseStructuredData schema={createPersonSchema(siteUrl)} />

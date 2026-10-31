@@ -1,0 +1,353 @@
+---
+title: Hirees — Recruitment and Job Portal
+description:
+  Hirees is a modern recruitment platform connecting job seekers with employers through
+  AI-driven job matching, real-time application tracking, and an intuitive recruiter
+  dashboard.
+createdAt: 2025-01-15
+isDraft: false
+isFeatured: true
+technologies:
+  - react
+  - vite
+  - tailwind
+  - shadcn
+  - vercel
+demoUrl: https://hirees.com
+---
+
+## Project Overview
+
+![Hirees Platform Screenshot](/images/projects/Hirees/homelab-screenshot.png)
+
+- **Project:** Hirees — Recruitment and Job Portal
+- **Website:** [https://hirees.com](https://hirees.com/)
+- **Developer:** Astrafloww
+- **Frontend Technology:** React, Vite, Tailwind CSS, shadcn/ui
+- **Deployment:** Vercel
+
+Hirees is a recruitment platform designed to connect job seekers with employers and
+streamline the hiring process. Its publicly announced capabilities include AI-driven job
+matching, application tracking, verified employers and candidates, and a recruiter
+dashboard.
+
+The platform serves two primary user groups: **candidates** looking for opportunities and
+**recruiters** managing hiring requirements.
+
+---
+
+## 1. Product Overview
+
+Hirees focuses on modernizing recruitment through intelligent matching, transparent
+tracking, and account trust. By combining real-time communication with structured profile
+management, the platform bridges the gap between active job seekers and talent acquisition
+teams.
+
+---
+
+## 2. Core Features
+
+### 2.1 AI-Driven Job Matching
+
+Matches candidates with relevant job opportunities based on their profiles and job
+requirements.
+
+**Technical implementation:**
+
+- Collect candidate skills, experience, qualifications, and job preferences.
+- Structure job descriptions into searchable fields.
+- Compare candidate profiles against job requirements.
+- Rank relevant opportunities using a matching score.
+- Display recommended jobs with explanations of relevant skills.
+
+**Components:** Candidate profiles, job data, matching logic, search and recommendation
+interfaces.
+
+> _Note:_ The public announcement confirms AI-driven matching, but the precise algorithm
+> and AI provider have not been verified.
+
+### 2.2 Job Search and Discovery
+
+Allows candidates to discover job opportunities relevant to their experience and career
+preferences.
+
+**Potential implementation capabilities include:**
+
+- Search by job title, company, or keyword.
+- Filter by location, employment type, and experience level.
+- View job descriptions and requirements.
+- Open detailed job listings.
+- Apply to suitable opportunities.
+
+The exact search filters and application workflow should be confirmed against the live
+application.
+
+### 2.3 Candidate Profiles
+
+A candidate profile provides a structured representation of a job seeker's professional
+background.
+
+**A recreation could support:**
+
+- Personal and contact information.
+- Professional summary.
+- Skills and work experience.
+- Education and qualifications.
+- Resume upload.
+- Job preferences.
+- Profile editing and completion status.
+
+Candidate information can then be used for job recommendations and recruiter review.
+
+### 2.4 Job Application Management
+
+Candidates need a way to submit applications and monitor their progress.
+
+**A suitable implementation includes:**
+
+- Application submission forms.
+- Resume and supporting-document attachments.
+- Application history.
+- Status tracking.
+- Application detail views.
+- Notifications when application statuses change.
+
+A typical workflow could use statuses such as `Applied`, `Under Review`, `Shortlisted`,
+`Interview`, `Selected`, and `Rejected`. These are proposed workflow states, not verified
+Hirees-specific labels.
+
+### 2.5 Real-Time Application Tracking
+
+The platform has publicly advertised
+[real-time application tracking](https://www.linkedin.com/posts/fstone-technologies_jobportal-hirees-recruitmentsimplified-activity-7352020056681144320-k2hn).
+
+**To recreate this functionality:**
+
+- Associate each application with a candidate and job.
+- Store its current status and update history.
+- Display changes in the candidate dashboard.
+- Allow authorized recruiters to update application statuses.
+- Notify candidates when relevant changes occur.
+
+A backend database and API would normally manage application records and status updates.
+WebSockets, server-sent events, or polling could provide live updates, depending on the
+actual architecture.
+
+### 2.6 Recruiter Dashboard
+
+![Recruiter Dashboard](/images/projects/Hirees/dashboard-screenshot.png)
+
+Provides recruiters with a central interface for managing recruitment activity.
+
+**A functional recreation could include:**
+
+- Overview of active job openings.
+- Job creation and editing.
+- Applicant lists for each position.
+- Candidate profile and resume review.
+- Application status management.
+- Candidate filtering and shortlisting.
+- Recruitment activity summaries.
+
+The publicly announced product specifically mentions an easy-to-use recruiter dashboard.
+The detailed modules above are a practical implementation blueprint rather than a verified
+inventory of existing screens.
+
+### 2.7 Job Posting and Management
+
+Recruiters need tools to publish and maintain vacancies.
+
+**Core implementation requirements:**
+
+- Create a job with its title, description, location, and requirements.
+- Define required skills and experience.
+- Publish, edit, close, or archive listings.
+- Display published vacancies on the candidate-facing interface.
+- Associate applications with the correct job.
+- Validate required fields before publishing.
+
+### 2.8 Employer and Candidate Verification
+
+Hirees has also publicly described verified employers and candidates as part of its
+offering.
+
+**A technical implementation could involve:**
+
+- Email verification.
+- Employer organization profiles.
+- Recruiter account permissions.
+- Administrative review and verification status.
+- Clear indicators for verified accounts.
+- Audit trails for verification changes.
+
+The precise identity-verification provider and verification procedure have not been
+established from the available public information.
+
+---
+
+## 3. User Roles and Permissions
+
+| Role              | Main Responsibilities                                                  |
+| :---------------- | :--------------------------------------------------------------------- |
+| **Candidate**     | Manage profile, discover jobs, submit applications, track progress.    |
+| **Recruiter**     | Manage job openings, review candidates, update hiring stages.          |
+| **Administrator** | Manage platform accounts, oversee verification, and handle moderation. |
+
+_The administrator role is recommended for a complete recreation; its presence in the
+original product needs verification._
+
+---
+
+## 4. Technical Architecture for Recreating the Features
+
+### Frontend
+
+- **React:** Component-based application and interactive dashboards.
+- **Vite:** Development server and production build tooling.
+- **Tailwind CSS:** Responsive layouts and styling.
+- **shadcn/ui:** Reusable interface components such as dialogs, tables, forms, and
+  dropdowns.
+- **React Router:** An optional routing solution if multiple client-side routes are
+  required.
+
+### Backend
+
+A backend is needed for persistent user accounts, job listings, applications, verification
+records, and recruiter operations. The actual backend technology used by Hirees has not
+been verified.
+
+A recreation could use a REST API with endpoints such as:
+
+```http
+POST   /api/auth/register
+POST   /api/auth/login
+GET    /api/jobs
+GET    /api/jobs/:id
+POST   /api/jobs
+GET    /api/candidates/me
+PUT    /api/candidates/me
+POST   /api/jobs/:id/applications
+GET    /api/applications/me
+PATCH  /api/applications/:id/status
+GET    /api/recruiter/dashboard
+GET    /api/recruiter/jobs/:id/applications
+```
+
+_These are proposed API routes, not confirmed existing Hirees endpoints._
+
+### Database
+
+A relational database such as PostgreSQL would be suitable for the core entities:
+
+- Users and roles
+- Candidate profiles
+- Employer organizations
+- Job listings
+- Job applications
+- Application status history
+- Verification records
+- Notifications
+
+### AI Job Matching
+
+A basic implementation can start with skill and keyword matching, then evolve toward
+semantic matching using text embeddings.
+
+**A matching pipeline could:**
+
+1. Extract structured information from candidate profiles and job descriptions.
+2. Normalize skills and job requirements.
+3. Compare candidate attributes against job criteria.
+4. Rank opportunities using a weighted scoring model.
+5. Return relevant matches to the frontend.
+
+The matching service should be separated from the React interface so the algorithm can be
+improved independently.
+
+### Deployment and Configuration
+
+- **Vercel** can host the React/Vite frontend.
+- A separate backend service or supported serverless functions may be needed, depending on
+  the implementation.
+- Environment variables should be used for service configuration, and private credentials
+  must remain on the server.
+
+---
+
+## 5. End-to-End Workflows
+
+### Candidate Workflow
+
+![Hirees Mobile View](/images/projects/Hirees/mobile-screenshot.png)
+
+```mermaid
+graph LR
+  A[Register] --> B[Complete Profile]
+  B --> C[Discover Matching Jobs]
+  C --> D[Review Job Details]
+  D --> E[Apply]
+  E --> F[Track Application]
+  F --> G[Receive Updates]
+```
+
+1. **Register** → Create an account with email verification.
+2. **Complete Profile** → Add skills, resume, experience, and preferences.
+3. **Discover Matching Jobs** → Search and receive AI-recommended roles.
+4. **Review Job Details** → Inspect job requirements and company profile.
+5. **Apply** → Submit application with attached documents.
+6. **Track Application** → Follow real-time status changes in dashboard.
+7. **Receive Updates** → Get notified on recruiter actions.
+
+### Recruiter Workflow
+
+```mermaid
+graph LR
+  A[Register] --> B[Verify Employer]
+  B --> C[Create Job]
+  C --> D[Publish Vacancy]
+  D --> E[Review Applicants]
+  E --> F[Shortlist]
+  F --> G[Update Statuses]
+  G --> H[Complete Hiring]
+```
+
+1. **Register** → Sign up for a recruiter account.
+2. **Verify Employer Account** → Confirm organization identity.
+3. **Create Job** → Define role, requirements, and desired competencies.
+4. **Publish Vacancy** → Make listing live for candidate discovery.
+5. **Review Applicants** → View candidate resumes and match scores.
+6. **Shortlist Candidates** → Filter high-potential applicants.
+7. **Update Application Statuses** → Advance candidates through interview stages.
+8. **Complete Hiring** → Mark position filled.
+
+---
+
+## 6. Suggested Development Order
+
+1. **Build the shared layout, navigation, and responsive UI.**
+2. **Implement authentication and role-based access.**
+3. **Create candidate and employer profiles.**
+4. **Build job creation, listing, search, and filtering.**
+5. **Implement application submission and persistence.**
+6. **Create recruiter and candidate dashboards.**
+7. **Add application-status tracking and notifications.**
+8. **Implement verification workflows.**
+9. **Add AI-based job matching.**
+10. **Test permissions, error handling, accessibility, and deployment.**
+
+---
+
+## 7. Summary
+
+Hirees combines the core functions of a recruitment portal with publicly advertised
+AI-based job matching, application tracking, verified accounts, and recruiter-facing
+tools.
+
+A faithful recreation requires more than reproducing the frontend. It must also implement
+the data model, candidate and recruiter workflows, application lifecycle, permissions, and
+matching logic that make those features work together.
+
+> **Verification note:** The product-level features above are based on Hirees' public
+> announcement. The detailed screens, database, APIs, authentication provider, AI
+> implementation, and exact user workflows remain to be verified against the running
+> application and source code.

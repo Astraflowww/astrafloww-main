@@ -1,0 +1,62 @@
+---
+import { Icon } from 'astro-icon/components'
+
+import Thumbnail from '@/components/Content/Thumbnail.astro'
+import { cn } from '@/lib/utils/cn'
+import { formatDateMachine } from '@/lib/utils/date'
+
+import ProjectCardStars from './ProjectCardStars.astro'
+
+type Props = {
+  title: string
+  description: string
+  targetUrl: string
+  createdAt: Date
+  slug: string
+  gitHubUrl?: string
+}
+
+const { title, description, targetUrl, createdAt, slug, gitHubUrl } = Astro.props
+---
+
+<article
+  class={cn(
+    'border-base-content/15 group bg-base-100 relative flex h-full flex-col overflow-hidden rounded-xl border transition-colors duration-200 ease-out',
+    'hover:border-base-content/25 has-[a:focus-visible]:border-base-content/25',
+    'has-[a:focus-visible]:outline-primary has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-2',
+    'lg:flex-row',
+  )}
+>
+  <div class="aspect-og relative shrink-0 self-stretch overflow-hidden">
+    <Thumbnail
+      collection="projects"
+      slug={slug}
+      class="lg:max-w-90 lg:border-r lg:border-b-0"
+    />
+    <time
+      datetime={formatDateMachine(createdAt)}
+      class="badge badge-sm absolute top-1 left-1 font-semibold"
+    >
+      {createdAt.getFullYear()}
+    </time>
+  </div>
+  <div class="p-4">
+    <h3 class="mb-3 line-clamp-2 text-lg font-bold">
+      <a href={targetUrl} class="link-overlay" data-astro-prefetch>
+        {title}
+      </a>
+    </h3>
+    <p class="text-base-content/75 mb-3 line-clamp-3">{description}</p>
+    <span class="mt-auto inline-flex items-center gap-1">
+      Read more
+      <Icon
+        name="lucide:arrow-right"
+        class="ease-springy size-4 transition-transform duration-300 motion-safe:group-hover:translate-x-1.25 motion-safe:group-has-[a:focus-visible]:translate-x-1.25"
+      />
+    </span>
+  </div>
+  <ProjectCardStars
+    className="pointer-events-none absolute top-1 right-1 font-semibold"
+    gitHubUrl={gitHubUrl}
+  />
+</article>

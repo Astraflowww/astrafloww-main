@@ -1,0 +1,51 @@
+{
+  "name": "Marek Honzal",
+  "short_name": "Marek Honzal",
+  "start_url": "/",
+  "scope": "/",
+  "theme_color": "#151219",
+  "background_color": "#151219",
+  "display": "standalone",
+
+  "icons": [
+    {
+      "src": "/favicon/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "Blog",
+      "short_name": "Blog",
+      "description": "Frontend insights, architecture tips, dev reflections, and growth notes.",
+      "url": "/blog",
+      "icons": [
+        {
+          "src": "/favicon/blog-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Projects",
+      "short_name": "Projects",
+      "description": "A collection of personal projects, experiments, and tools by Marek Honzal.",
+      "url": "/projects",
+      "icons": [
+        {
+          "src": "/favicon/projects-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

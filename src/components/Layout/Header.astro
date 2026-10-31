@@ -1,0 +1,33 @@
+---
+import { ROUTES } from '@/config/routes'
+import { cn } from '@/lib/utils/cn'
+
+import Navigation from './Header/Navigation.astro'
+import ThemeToggle from './Header/ThemeToggle.astro'
+---
+
+<header class="grid h-(--header-h) items-center">
+  <nav
+    aria-label="Main navigation"
+    class={cn(
+      'mx-auto flex w-full max-w-6xl items-center justify-between px-5',
+      'md:px-8',
+    )}
+  >
+    <a
+      href={ROUTES.home}
+      class="link-outline link-outline-rounded flex items-center gap-2"
+    >
+      <span class="text-xl font-black tracking-tighter text-[var(--ink)] uppercase">
+        Astra<span class="text-[var(--signal-pink)]">Floww</span>
+      </span>
+      <span class="hidden sm:inline-block font-mono text-[10px] text-[var(--ink-muted)] tracking-widest uppercase border-l border-[var(--azure-white)] pl-2">
+        Studio // 2026
+      </span>
+    </a>
+    <div class="flex items-center gap-3">
+      <Navigation />
+      <ThemeToggle />
+    </div>
+  </nav>
+</header>

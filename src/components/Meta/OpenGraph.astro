@@ -1,0 +1,41 @@
+---
+import { OG_IMAGE } from '@/config/seo'
+import { ensureAstroSite } from '@/lib/utils/guards'
+
+type Props = {
+  title: string
+  description: string
+  imagePath: string
+  type?: 'website' | 'article'
+}
+
+const { title, description, imagePath, type = 'website' } = Astro.props
+const origin = ensureAstroSite(Astro.site)
+const pageUrl = Astro.url.toString().replace(/\/$/, '')
+const imageUrl = new URL(imagePath, origin).toString()
+
+const IMAGE_TYPE = 'image/png'
+const imageAlt = title
+const siteName = new URL(origin).hostname
+---
+
+<!-- Open Graph -->
+<meta property="og:type" content={type} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={pageUrl} />
+<meta property="og:site_name" content={siteName} />
+
+<meta property="og:image" content={imageUrl} />
+<meta property="og:image:secure_url" content={imageUrl} />
+<meta property="og:image:width" content={String(OG_IMAGE.width)} />
+<meta property="og:image:height" content={String(OG_IMAGE.height)} />
+<meta property="og:image:type" content={IMAGE_TYPE} />
+<meta property="og:image:alt" content={imageAlt} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
+<meta name="twitter:image:alt" content={imageAlt} />

@@ -1,0 +1,96 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<button
+  id="theme-toggle-btn"
+  type="button"
+  aria-label="Toggle dark / light theme"
+  class="theme-toggle-btn"
+>
+  <!-- Sun icon for dark mode (click to go light) -->
+  <span class="icon-sun" aria-hidden="true">
+    <Icon name="lucide:sun" class="size-4" />
+  </span>
+  <!-- Moon icon for light mode (click to go dark) -->
+  <span class="icon-moon" aria-hidden="true">
+    <Icon name="lucide:moon" class="size-4" />
+  </span>
+</button>
+
+<style>
+  .theme-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    border: 1.5px solid var(--azure-white);
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+    transition:
+      background-color 0.25s ease,
+      color 0.25s ease,
+      border-color 0.25s ease,
+      transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .theme-toggle-btn:hover {
+    background-color: var(--signal-pink);
+    border-color: var(--signal-pink);
+    color: #fff;
+    transform: scale(1.08);
+  }
+
+  /* Show moon in light mode (to switch to dark), sun in dark mode (to switch to light) */
+  .icon-sun {
+    display: none;
+  }
+  .icon-moon {
+    display: flex;
+  }
+
+  :global([data-theme='custom-dark']) .icon-sun {
+    display: flex;
+  }
+  :global([data-theme='custom-dark']) .icon-moon {
+    display: none;
+  }
+</style>
+
+<script>
+  const STORAGE_KEY = 'theme'
+
+  const applyTheme = (theme: 'light' | 'dark') => {
+    document.documentElement.dataset.theme =
+      theme === 'dark' ? 'custom-dark' : 'custom-light'
+    try {
+      localStorage.setItem(STORAGE_KEY, theme)
+    } catch {
+      /* noop */
+    }
+  }
+
+  const getStoredTheme = (): 'light' | 'dark' => {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY)
+      if (stored === 'dark' || stored === 'light') return stored
+    } catch {
+      /* noop */
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  }
+
+  const btn = document.getElementById('theme-toggle-btn')
+
+  // Apply saved/system theme on load
+  applyTheme(getStoredTheme())
+
+  btn?.addEventListener('click', () => {
+    const isDark = document.documentElement.dataset.theme === 'custom-dark'
+    applyTheme(isDark ? 'light' : 'dark')
+  })
+</script>

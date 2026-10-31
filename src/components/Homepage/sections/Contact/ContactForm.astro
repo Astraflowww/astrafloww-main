@@ -1,0 +1,225 @@
+---
+const SERVICES = [
+  'Web Development',
+  'SEO',
+  'UI/UX Design',
+  'AI Development',
+  'DevOps',
+  'Other',
+]
+---
+
+<form id="contact-form" class="space-y-4" novalidate>
+  <!-- Name & Email Row -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div>
+      <label
+        for="contact-name"
+        class="block text-[11px] font-mono uppercase tracking-wider text-[var(--ink-muted)]/70 mb-1.5"
+      >
+        Your Name *
+      </label>
+      <input
+        id="contact-name"
+        name="name"
+        type="text"
+        required
+        placeholder="Full Name"
+        class="w-full px-4 py-3 rounded-xl bg-[var(--paper)]/70 border border-[var(--azure-white)]/40 text-[var(--ink)] placeholder-[var(--ink-muted)]/40 text-sm focus:outline-none focus:border-[var(--signal-pink)] focus:ring-1 focus:ring-[var(--signal-pink)] transition-colors"
+      />
+      <p id="error-name" class="hidden mt-1 text-xs text-rose-400 font-mono"></p>
+    </div>
+
+    <div>
+      <label
+        for="contact-email"
+        class="block text-[11px] font-mono uppercase tracking-wider text-[var(--ink-muted)]/70 mb-1.5"
+      >
+        Email Address *
+      </label>
+      <input
+        id="contact-email"
+        name="email"
+        type="email"
+        required
+        placeholder="Email"
+        class="w-full px-4 py-3 rounded-xl bg-[var(--paper)]/70 border border-[var(--azure-white)]/40 text-[var(--ink)] placeholder-[var(--ink-muted)]/40 text-sm focus:outline-none focus:border-[var(--signal-pink)] focus:ring-1 focus:ring-[var(--signal-pink)] transition-colors"
+      />
+      <p id="error-email" class="hidden mt-1 text-xs text-rose-400 font-mono"></p>
+    </div>
+  </div>
+
+  <!-- Service & Phone Row -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div>
+      <label
+        for="contact-service"
+        class="block text-[11px] font-mono uppercase tracking-wider text-[var(--ink-muted)]/70 mb-1.5"
+      >
+        Service Required *
+      </label>
+      <select
+        id="contact-service"
+        name="service"
+        required
+        class="w-full px-4 py-3 rounded-xl bg-[var(--paper)]/90 border border-[var(--azure-white)]/40 text-[var(--ink)] text-sm focus:outline-none focus:border-[var(--signal-pink)] focus:ring-1 focus:ring-[var(--signal-pink)] transition-colors"
+      >
+        <option value="" disabled selected class="text-[var(--ink-muted)]/40">
+          Select capability...
+        </option>
+        {SERVICES.map((s) => (
+          <option value={s} class="bg-[var(--paper)]/90 text-[var(--ink)]">
+            {s}
+          </option>
+        ))}
+      </select>
+      <p id="error-service" class="hidden mt-1 text-xs text-rose-400 font-mono"></p>
+    </div>
+
+    <div>
+      <label
+        for="contact-phone"
+        class="block text-[11px] font-mono uppercase tracking-wider text-[var(--ink-muted)]/70 mb-1.5"
+      >
+        Phone / WhatsApp (Optional)
+      </label>
+      <input
+        id="contact-phone"
+        name="phone"
+        type="tel"
+        placeholder="+91 XXXXX XXXXX"
+        class="w-full px-4 py-3 rounded-xl bg-[var(--paper)]/70 border border-[var(--azure-white)]/40 text-[var(--ink)] placeholder-[var(--ink-muted)]/40 text-sm focus:outline-none focus:border-[var(--signal-pink)] focus:ring-1 focus:ring-[var(--signal-pink)] transition-colors"
+      />
+    </div>
+  </div>
+
+  <!-- Message -->
+  <div>
+    <label
+      for="contact-message"
+      class="block text-[11px] font-mono uppercase tracking-wider text-[var(--ink-muted)]/70 mb-1.5"
+    >
+      Project Brief / Message *
+    </label>
+    <textarea
+      id="contact-message"
+      name="message"
+      rows="4"
+      required
+      placeholder="Tell us about your goals, current bottlenecks, and target timeline..."
+      class="w-full px-4 py-3 rounded-xl bg-[var(--paper)]/70 border border-[var(--azure-white)]/40 text-[var(--ink)] placeholder-[var(--ink-muted)]/40 text-sm focus:outline-none focus:border-[var(--signal-pink)] focus:ring-1 focus:ring-[var(--signal-pink)] transition-colors resize-none"
+    ></textarea>
+    <p id="error-message" class="hidden mt-1 text-xs text-rose-400 font-mono"></p>
+  </div>
+
+  <!-- Feedback States -->
+  <div
+    id="submit-success"
+    class="hidden p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono"
+  >
+    ✓ Inquiry received. A team member will review and respond within 24 hours.
+  </div>
+
+  <div
+    id="submit-error"
+    class="hidden p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs font-mono"
+  >
+    ✕{' '}
+    <span id="error-text">
+      Could not submit inquiry. Please email us directly at devanshishs@gmail.com.
+    </span>
+  </div>
+
+  <!-- Submit Button -->
+  <button
+    id="submit-btn"
+    type="submit"
+    class="w-full py-3.5 px-6 rounded-full bg-[var(--signal-pink)] text-white text-xs font-mono uppercase tracking-wider font-semibold transition-all hover:bg-[#6c5ce7] shadow-lg flex items-center justify-center gap-3 cursor-pointer disabled:opacity-50"
+  >
+    <span id="btn-text">Send Project Inquiry</span>
+    <span class="text-base">&rarr;</span>
+  </button>
+</form>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null
+  const btn = document.getElementById('submit-btn') as HTMLButtonElement | null
+  const btnText = document.getElementById('btn-text')
+  const successBox = document.getElementById('submit-success')
+  const errorBox = document.getElementById('submit-error')
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault()
+
+    const nameInput = document.getElementById('contact-name') as HTMLInputElement
+    const emailInput = document.getElementById('contact-email') as HTMLInputElement
+    const serviceInput = document.getElementById('contact-service') as HTMLSelectElement
+    const messageInput = document.getElementById('contact-message') as HTMLTextAreaElement
+
+    let valid = true
+
+    // Simple validation
+    if (!nameInput.value.trim()) {
+      showFieldError('error-name', 'Name is required')
+      valid = false
+    } else {
+      clearFieldError('error-name')
+    }
+
+    if (!emailInput.value.trim() || !emailInput.value.includes('@')) {
+      showFieldError('error-email', 'Valid email address is required')
+      valid = false
+    } else {
+      clearFieldError('error-email')
+    }
+
+    if (!serviceInput.value) {
+      showFieldError('error-service', 'Please select a service')
+      valid = false
+    } else {
+      clearFieldError('error-service')
+    }
+
+    if (!messageInput.value.trim()) {
+      showFieldError('error-message', 'Project brief is required')
+      valid = false
+    } else {
+      clearFieldError('error-message')
+    }
+
+    if (!valid) return
+
+    if (btn) btn.disabled = true
+    if (btnText) btnText.textContent = 'Transmitting Inquiry...'
+    if (successBox) successBox.classList.add('hidden')
+    if (errorBox) errorBox.classList.add('hidden')
+
+    try {
+      // Simulate submission or call API
+      await new Promise((resolve) => setTimeout(resolve, 800))
+      if (successBox) successBox.classList.remove('hidden')
+      form.reset()
+    } catch {
+      if (errorBox) errorBox.classList.remove('hidden')
+    } finally {
+      if (btn) btn.disabled = false
+      if (btnText) btnText.textContent = 'Send Project Inquiry'
+    }
+  })
+
+  function showFieldError(id: string, msg: string) {
+    const el = document.getElementById(id)
+    if (el) {
+      el.textContent = msg
+      el.classList.remove('hidden')
+    }
+  }
+
+  function clearFieldError(id: string) {
+    const el = document.getElementById(id)
+    if (el) {
+      el.textContent = ''
+      el.classList.add('hidden')
+    }
+  }
+</script>

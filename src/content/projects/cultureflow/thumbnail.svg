@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <defs>
+    <!-- Subtle sketch filter or gradients if needed -->
+    <linearGradient id="ticketGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFC800" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FF9E00" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left: Priority Admit Pass Ticket Mockup -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Ticket Shadow -->
+    <rect x="74" y="114" width="380" height="290" rx="18" fill="var(--color-neutral)" opacity="0.3" transform="rotate(-1.5 264 259)"/>
+    
+    <!-- Ticket Body (Navy/Dark card inspired by Culture Flow ticket) -->
+    <rect x="70" y="110" width="380" height="290" rx="18" fill="#0A0F24" stroke="#FFCC00" stroke-width="3"/>
+    
+    <!-- Ticket Notch Top & Bottom -->
+    <circle cx="370" cy="110" r="14" fill="var(--color-base-100)" stroke="#FFCC00" stroke-width="3"/>
+    <circle cx="370" cy="400" r="14" fill="var(--color-base-100)" stroke="#FFCC00" stroke-width="3"/>
+    <line x1="370" y1="126" x2="370" y2="384" stroke="#FFCC00" stroke-width="2" stroke-dasharray="6 6" opacity="0.5"/>
+
+    <!-- Ticket Header -->
+    <text x="100" y="148" font-family="Excalifont, sans-serif" font-size="11" font-weight="bold" fill="#FFCC00" letter-spacing="1.5">CULTURE FLOW · GLOBAL MOBILITY</text>
+    <text x="100" y="168" font-family="Excalifont, sans-serif" font-size="9" fill="#94A3B8" letter-spacing="1">PRIORITY ADMIT PASS 2026/2027</text>
+
+    <!-- Pass Nameplate -->
+    <text x="100" y="215" font-family="Excalifont, sans-serif" font-size="22" font-weight="900" fill="#FFFFFF" letter-spacing="0.5">GLOBAL</text>
+    <text x="100" y="242" font-family="Excalifont, sans-serif" font-size="22" font-weight="900" fill="#FFCC00" letter-spacing="0.5">SCHOLAR</text>
+
+    <!-- Institutional Partners -->
+    <rect x="100" y="270" width="240" height="26" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <text x="220" y="287" font-family="Excalifont, sans-serif" font-size="10" font-weight="bold" fill="#E2E8F0" text-anchor="middle" letter-spacing="1">OXFORD · HARVARD · TUM · NUS</text>
+
+    <!-- 40/40/20 Tag -->
+    <rect x="100" y="315" width="130" height="24" rx="12" fill="#FFCC00" opacity="0.2"/>
+    <rect x="100" y="315" width="130" height="24" rx="12" fill="none" stroke="#FFCC00" stroke-width="1.5"/>
+    <text x="165" y="331" font-family="Excalifont, sans-serif" font-size="11" font-weight="bold" fill="#FFCC00" text-anchor="middle">40 / 40 / 20 MODEL</text>
+
+    <!-- Tear-off Stub (Right side of ticket) -->
+    <g transform="translate(412, 255) rotate(90)">
+      <text x="0" y="0" font-family="Excalifont, sans-serif" font-size="18" font-weight="bold" fill="#FFCC00" text-anchor="middle" letter-spacing="5">ADMIT ONE</text>
+    </g>
+  </g>
+
+  <!-- Flight Path / Connection Arc -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M420 220 C 500 120, 560 140, 620 190 S 660 300, 560 310 S 490 270, 580 370" fill="none" stroke="#FFCC00" stroke-width="3" stroke-dasharray="8 6"/>
+    <polygon points="585,365 595,372 585,380" fill="#FFCC00"/>
+  </g>
+
+  <!-- Right: 3 Academic Tracks & Immersion Platform Cards -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Main Card Shadow -->
+    <rect x="534" y="94" width="350" height="340" rx="16" fill="var(--color-neutral)" opacity="0.2" transform="rotate(1.2 709 264)"/>
+    <!-- Main Card Body -->
+    <rect x="530" y="90" width="350" height="340" rx="16" fill="var(--color-base-100)" stroke="var(--color-base-content)" stroke-width="3.5"/>
+
+    <!-- Badge -->
+    <rect x="560" y="120" width="140" height="26" rx="13" fill="#FFCC00" opacity="0.2"/>
+    <rect x="560" y="120" width="140" height="26" rx="13" fill="none" stroke="#FFCC00" stroke-width="2"/>
+    <text x="630" y="137" font-family="Excalifont, sans-serif" font-size="11" font-weight="bold" fill="var(--color-base-content)" text-anchor="middle">✦ 3 IMMERSION TRACKS</text>
+
+    <!-- Title -->
+    <text x="560" y="180" font-family="Excalifont, sans-serif" font-size="22" font-weight="bold" fill="var(--color-base-content)">Culture Flow Platform</text>
+    <text x="560" y="202" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content)" opacity="0.75">New Delhi · Inaugural 2027 Cohort</text>
+
+    <line x1="560" y1="220" x2="850" y2="220" stroke="var(--color-base-content)" stroke-width="2" stroke-dasharray="4 4" opacity="0.25"/>
+
+    <!-- Track 1: Tech & Innovation -->
+    <g transform="translate(560, 235)">
+      <rect x="0" y="0" width="290" height="42" rx="8" fill="var(--color-primary)" opacity="0.12"/>
+      <rect x="0" y="0" width="290" height="42" rx="8" fill="none" stroke="var(--color-primary)" stroke-width="1.5"/>
+      <circle cx="20" cy="21" r="5" fill="var(--color-primary)"/>
+      <text x="35" y="26" font-family="Excalifont, sans-serif" font-size="13" font-weight="bold" fill="var(--color-base-content)">Tech &amp; Innovation</text>
+      <text x="265" y="26" font-family="Excalifont, sans-serif" font-size="10" fill="var(--color-base-content)" opacity="0.7" text-anchor="end">Frontier AI</text>
+    </g>
+
+    <!-- Track 2: Sustainability & Impact -->
+    <g transform="translate(560, 285)">
+      <rect x="0" y="0" width="290" height="42" rx="8" fill="var(--color-success)" opacity="0.12"/>
+      <rect x="0" y="0" width="290" height="42" rx="8" fill="none" stroke="var(--color-success)" stroke-width="1.5"/>
+      <circle cx="20" cy="21" r="5" fill="var(--color-success)"/>
+      <text x="35" y="26" font-family="Excalifont, sans-serif" font-size="13" font-weight="bold" fill="var(--color-base-content)">Sustainability &amp; Impact</text>
+      <text x="265" y="26" font-family="Excalifont, sans-serif" font-size="10" fill="var(--color-base-content)" opacity="0.7" text-anchor="end">Ecosystems</text>
+    </g>
+
+    <!-- Track 3: Heritage & Culture -->
+    <g transform="translate(560, 335)">
+      <rect x="0" y="0" width="290" height="42" rx="8" fill="#EAB308" opacity="0.15"/>
+      <rect x="0" y="0" width="290" height="42" rx="8" fill="none" stroke="#EAB308" stroke-width="1.5"/>
+      <circle cx="20" cy="21" r="5" fill="#EAB308"/>
+      <text x="35" y="26" font-family="Excalifont, sans-serif" font-size="13" font-weight="bold" fill="var(--color-base-content)">Heritage &amp; Culture</text>
+      <text x="265" y="26" font-family="Excalifont, sans-serif" font-size="10" fill="var(--color-base-content)" opacity="0.7" text-anchor="end">Civilisations</text>
+    </g>
+
+    <!-- Status pill at bottom -->
+    <rect x="560" y="390" width="290" height="24" rx="6" fill="var(--color-neutral)" opacity="0.15"/>
+    <text x="705" y="406" font-family="Excalifont, sans-serif" font-size="11" fill="var(--color-base-content)" text-anchor="middle">Next.js 16 · React · Tailwind · Vercel</text>
+  </g>
+</svg>

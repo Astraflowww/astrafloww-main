@@ -1,0 +1,34 @@
+---
+import { Icon } from 'astro-icon/components'
+
+import { cn } from '@/lib/utils/cn'
+
+import {
+  alertIconVariants,
+  alertRootVariants,
+  alertTitleVariants,
+  defaultTitles,
+  iconIntentMap,
+  type AlertVariant,
+} from './alertVariants'
+
+type Props = {
+  intent?: AlertVariant
+  title?: string
+  className?: string
+}
+
+const { intent: intentProp, title: titleProp, className } = Astro.props
+
+const intent = intentProp ?? 'info'
+const title = titleProp ?? defaultTitles[intent]
+const iconName = iconIntentMap[intent]
+---
+
+<div class={cn(alertRootVariants({ intent }), className)}>
+  <div class="mb-3 flex items-center gap-3">
+    <Icon name={iconName} class={alertIconVariants({ intent })} />
+    <span class={alertTitleVariants({ intent })}>{title}</span>
+  </div>
+  <slot />
+</div>

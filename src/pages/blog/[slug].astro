@@ -1,0 +1,59 @@
+---
+import type { GetStaticPaths } from 'astro'
+import { getCollection, render } from 'astro:content'
+
+import ArticleHeader from '@/components/Content/ArticleHeader.astro'
+import { mdxComponents } from '@/components/MDX/MDXComponents'
+import ArticleMeta from '@/components/Meta/ArticleMeta.astro'
+import StructuredData from '@/components/Meta/SchemaOrg/Base.astro'
+import { ROUTES } from '@/config/routes'
+import { createBlogPostSchema, createBreadcrumbSchema } from '@/config/schemaJson'
+import ReadingLayout from '@/layouts/ReadingLayout.astro'
+import { shouldIncludeItem } from '@/lib/utils/content'
+import { ensureAstroSite } from '@/lib/utils/guards'
+
+export const getStaticPaths = (async () => {
+  const posts = await getCollection('blog', shouldIncludeItem)
+
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }))
+}) satisfies GetStaticPaths
+
+const { post } = Astro.props
+const { Content, headings, remarkPluginFrontmatter } = await render(post)
+
+const { data } = post
+const { readingTime } = remarkPluginFrontmatter
+
+const siteUrl = ensureAstroSite(Astro.site)
+const structuredData = createBlogPostSchema(siteUrl, post, readingTime.words)
+const breadcrumbData = createBreadcrumbSchema(siteUrl, [
+  { name: 'Home', path: ROUTES.home },
+  { name: 'Blog', path: ROUTES.blog._ },
+  { name: data.title, path: ROUTES.blog.post(post.id) },
+])
+---
+
+<ReadingLayout
+  pageTitle={data.title}
+  pageDescription={data.description}
+  headings={headings}
+  ogType="article"
+>
+  <Fragment slot="head">
+    <StructuredData schema={structuredData} />
+    <StructuredData schema={breadcrumbData} />
+    <ArticleMeta
+      publishedTime={data.createdAt}
+      modifiedTime={data.updatedAt}
+      tags={data.tags}
+    />
+  </Fragment>
+  <Fragment slot="contentHeader">
+    <ArticleHeader className="mt-5" readingTime={readingTime} slug={post.id} {...data} />
+  </Fragment>
+
+  <Content components={mdxComponents} />
+</ReadingLayout>

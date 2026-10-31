@@ -1,0 +1,16 @@
+---
+---
+
+<div id="scroll-progress-bar" class="fixed top-0 left-0 z-50 h-[3px] w-full">
+  <div
+    id="scroll-progress-fill"
+    class="bg-base-content h-full w-full origin-left"
+    style="transform: scaleX(0); will-change: transform"
+  ></div>
+</div>
+
+<script>
+  import { initScrollProgressBar } from '@/lib/scrollProgress.ts'
+
+  initScrollProgressBar()
+</script>
