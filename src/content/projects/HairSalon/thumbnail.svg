@@ -1,5 +1,164 @@
-<svg width="100%" height="100%" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="#F0F0F0"/>
-  <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="20" fill="#333" text-anchor="middle" alignment-baseline="middle">Astrafloww</text>
-  <text x="50%" y="70%" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle" alignment-baseline="middle">Hair Salon Project</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- Salon website card -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect x="74" y="94" width="400" height="350" rx="16" fill="var(--color-neutral, #9ca3af)" opacity="0.3" transform="rotate(-1 274 269)"/>
+    <rect x="70" y="90" width="400" height="350" rx="16" fill="var(--color-base-100, #ffffff)" stroke="var(--color-base-content, #1f2937)" stroke-width="4"/>
+    <path d="M70 134 H470" stroke="var(--color-base-content, #1f2937)" stroke-width="3" opacity="0.6"/>
+    <circle cx="96" cy="112" r="6" fill="var(--color-error, #ef4444)"/>
+    <circle cx="116" cy="112" r="6" fill="var(--color-warning, #f59e0b)"/>
+    <circle cx="136" cy="112" r="6" fill="var(--color-success, #22c55e)"/>
+    <rect x="170" y="100" width="260" height="24" rx="12" fill="var(--color-neutral, #9ca3af)" opacity="0.3"/>
+    <text x="300" y="117" font-family="Excalifont, sans-serif" font-size="13" font-weight="bold" fill="var(--color-base-content, #1f2937)" text-anchor="middle" letter-spacing="4">SCISSORS</text>
+    <rect x="90" y="150" width="360" height="120" rx="10" fill="var(--color-primary, #c9973f)" opacity="0.15"/>
+    <rect x="90" y="150" width="360" height="120" rx="10" fill="none" stroke="var(--color-primary, #c9973f)" stroke-width="2.5"/>
+    <text x="108" y="172" font-family="Excalifont, sans-serif" font-size="10" font-weight="bold" fill="var(--color-primary, #c9973f)" letter-spacing="2">LUXURY HAIR &amp; BEAUTY</text>
+    <rect x="108" y="184" width="170" height="14" rx="7" fill="var(--color-base-content, #1f2937)" opacity="0.8"/>
+    <rect x="108" y="206" width="130" height="12" rx="6" fill="var(--color-base-content, #1f2937)" opacity="0.4"/>
+    <rect x="108" y="232" width="136" height="26" rx="13" fill="var(--color-primary, #c9973f)"/>
+    <text x="176" y="249" font-family="Excalifont, sans-serif" font-size="12" font-weight="bold" fill="var(--color-primary-content, #ffffff)" text-anchor="middle">Book Appointment</text>
+    <circle cx="392" cy="212" r="46" fill="var(--color-secondary, #ec4899)" opacity="0.15"/>
+    <circle cx="392" cy="212" r="46" fill="none" stroke="var(--color-secondary, #ec4899)" stroke-width="2.5" stroke-dasharray="5 5"/>
+    <path d="M378 224 L408 186 M406 224 L376 186" stroke="var(--color-base-content, #1f2937)" stroke-width="4" fill="none"/>
+    <circle cx="374" cy="236" r="10" fill="var(--color-base-100, #ffffff)" stroke="var(--color-base-content, #1f2937)" stroke-width="3.5"/>
+    <circle cx="410" cy="236" r="10" fill="var(--color-base-100, #ffffff)" stroke="var(--color-base-content, #1f2937)" stroke-width="3.5"/>
+    <circle cx="392" cy="205" r="3" fill="var(--color-primary, #c9973f)"/>
+    <text x="92" y="292" font-family="Excalifont, sans-serif" font-size="11" font-weight="bold" fill="var(--color-secondary, #ec4899)" letter-spacing="2">SERVICES</text>
+    <rect x="90" y="302" width="82" height="28" rx="8" fill="var(--color-primary, #c9973f)" opacity="0.15"/>
+    <rect x="90" y="302" width="82" height="28" rx="8" fill="none" stroke="var(--color-primary, #c9973f)" stroke-width="2"/>
+    <text x="131.0" y="321" font-family="Excalifont, sans-serif" font-size="13" fill="var(--color-primary, #c9973f)" text-anchor="middle">Hair Care</text>
+    <rect x="182" y="302" width="112" height="28" rx="8" fill="var(--color-secondary, #ec4899)" opacity="0.15"/>
+    <rect x="182" y="302" width="112" height="28" rx="8" fill="none" stroke="var(--color-secondary, #ec4899)" stroke-width="2"/>
+    <text x="238.0" y="321" font-family="Excalifont, sans-serif" font-size="13" fill="var(--color-secondary, #ec4899)" text-anchor="middle">Hair Coloring</text>
+    <rect x="304" y="302" width="84" height="28" rx="8" fill="var(--color-accent, #14b8a6)" opacity="0.15"/>
+    <rect x="304" y="302" width="84" height="28" rx="8" fill="none" stroke="var(--color-accent, #14b8a6)" stroke-width="2"/>
+    <text x="346.0" y="321" font-family="Excalifont, sans-serif" font-size="13" fill="var(--color-accent, #14b8a6)" text-anchor="middle">Skin Care</text>
+    <rect x="90" y="338" width="72" height="28" rx="8" fill="var(--color-success, #22c55e)" opacity="0.15"/>
+    <rect x="90" y="338" width="72" height="28" rx="8" fill="none" stroke="var(--color-success, #22c55e)" stroke-width="2"/>
+    <text x="126.0" y="357" font-family="Excalifont, sans-serif" font-size="13" fill="var(--color-success, #22c55e)" text-anchor="middle">Styling</text>
+    <rect x="172" y="338" width="122" height="28" rx="8" fill="var(--color-info, #3b82f6)" opacity="0.15"/>
+    <rect x="172" y="338" width="122" height="28" rx="8" fill="none" stroke="var(--color-info, #3b82f6)" stroke-width="2"/>
+    <text x="233.0" y="357" font-family="Excalifont, sans-serif" font-size="13" fill="var(--color-info, #3b82f6)" text-anchor="middle">Hair Treatment</text>
+    <text x="92" y="388" font-family="Excalifont, sans-serif" font-size="11" font-weight="bold" fill="var(--color-accent, #14b8a6)" letter-spacing="2">GALLERY</text>
+    <rect x="90" y="396" width="112" height="34" rx="8" fill="var(--color-neutral, #9ca3af)" opacity="0.25"/>
+    <rect x="90" y="396" width="112" height="34" rx="8" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="2" opacity="0.6"/>
+    <circle cx="120" cy="408" r="6" fill="var(--color-warning, #f59e0b)"/>
+    <path d="M98 424 l24 -12 l16 8 l22 -14 l30 18" stroke="var(--color-base-content, #1f2937)" stroke-width="2" fill="none" opacity="0.5"/>
+    <rect x="214" y="396" width="112" height="34" rx="8" fill="var(--color-neutral, #9ca3af)" opacity="0.25"/>
+    <rect x="214" y="396" width="112" height="34" rx="8" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="2" opacity="0.6"/>
+    <circle cx="244" cy="408" r="6" fill="var(--color-warning, #f59e0b)"/>
+    <path d="M222 424 l24 -12 l16 8 l22 -14 l30 18" stroke="var(--color-base-content, #1f2937)" stroke-width="2" fill="none" opacity="0.5"/>
+    <rect x="338" y="396" width="112" height="34" rx="8" fill="var(--color-neutral, #9ca3af)" opacity="0.25"/>
+    <rect x="338" y="396" width="112" height="34" rx="8" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="2" opacity="0.6"/>
+    <circle cx="368" cy="408" r="6" fill="var(--color-warning, #f59e0b)"/>
+    <path d="M346 424 l24 -12 l16 8 l22 -14 l30 18" stroke="var(--color-base-content, #1f2937)" stroke-width="2" fill="none" opacity="0.5"/>
+  </g>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M480 270 H504" stroke="var(--color-primary, #c9973f)" stroke-width="3" stroke-dasharray="6 5" fill="none"/>
+    <polygon points="504,262 518,270 504,278" fill="var(--color-primary, #c9973f)"/>
+  </g>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect x="528" y="114" width="370" height="330" rx="16" fill="var(--color-neutral, #9ca3af)" opacity="0.3" transform="rotate(1.2 713 279)"/>
+    <rect x="524" y="110" width="370" height="330" rx="16" fill="var(--color-base-100, #ffffff)" stroke="var(--color-base-content, #1f2937)" stroke-width="4"/>
+    <text x="550" y="148" font-family="Excalifont, sans-serif" font-size="20" font-weight="bold" fill="var(--color-base-content, #1f2937)">Book Appointment</text>
+    <path d="M550 164 h318" stroke="var(--color-base-content, #1f2937)" stroke-width="2.5" opacity="0.25" stroke-dasharray="4 4"/>
+    <text x="550" y="188" font-family="Excalifont, sans-serif" font-size="13" fill="var(--color-base-content, #1f2937)" opacity="0.7">Select a date</text>
+    <text x="568" y="212" font-family="Excalifont, sans-serif" font-size="11" font-weight="bold" fill="var(--color-base-content, #1f2937)" opacity="0.5" text-anchor="middle">M</text>
+    <text x="614" y="212" font-family="Excalifont, sans-serif" font-size="11" font-weight="bold" fill="var(--color-base-content, #1f2937)" opacity="0.5" text-anchor="middle">T</text>
+    <text x="660" y="212" font-family="Excalifont, sans-serif" font-size="11" font-weight="bold" fill="var(--color-base-content, #1f2937)" opacity="0.5" text-anchor="middle">W</text>
+    <text x="706" y="212" font-family="Excalifont, sans-serif" font-size="11" font-weight="bold" fill="var(--color-base-content, #1f2937)" opacity="0.5" text-anchor="middle">T</text>
+    <text x="752" y="212" font-family="Excalifont, sans-serif" font-size="11" font-weight="bold" fill="var(--color-base-content, #1f2937)" opacity="0.5" text-anchor="middle">F</text>
+    <text x="798" y="212" font-family="Excalifont, sans-serif" font-size="11" font-weight="bold" fill="var(--color-base-content, #1f2937)" opacity="0.5" text-anchor="middle">S</text>
+    <text x="844" y="212" font-family="Excalifont, sans-serif" font-size="11" font-weight="bold" fill="var(--color-base-content, #1f2937)" opacity="0.5" text-anchor="middle">S</text>
+    <rect x="550" y="222" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="550" y="222" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="568" y="240" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">1</text>
+    <rect x="596" y="222" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="596" y="222" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="614" y="240" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">2</text>
+    <rect x="642" y="222" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="642" y="222" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="660" y="240" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">3</text>
+    <rect x="688" y="222" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="688" y="222" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="706" y="240" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">4</text>
+    <rect x="734" y="222" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="734" y="222" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="752" y="240" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">5</text>
+    <rect x="780" y="222" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="780" y="222" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="798" y="240" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">6</text>
+    <rect x="826" y="222" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="826" y="222" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="844" y="240" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">7</text>
+    <rect x="550" y="256" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="550" y="256" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="568" y="274" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">8</text>
+    <rect x="596" y="256" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="596" y="256" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="614" y="274" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">9</text>
+    <rect x="642" y="256" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="642" y="256" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="660" y="274" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">10</text>
+    <rect x="688" y="256" width="36" height="26" rx="7" fill="var(--color-primary, #c9973f)" opacity="1"/>
+    <text x="706" y="274" font-family="Excalifont, sans-serif" font-size="12" font-weight="bold" fill="var(--color-primary-content, #ffffff)" text-anchor="middle">11</text>
+    <rect x="734" y="256" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="734" y="256" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="752" y="274" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">12</text>
+    <rect x="780" y="256" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="780" y="256" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="798" y="274" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">13</text>
+    <rect x="826" y="256" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="826" y="256" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="844" y="274" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">14</text>
+    <rect x="550" y="290" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="550" y="290" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="568" y="308" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">15</text>
+    <rect x="596" y="290" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="596" y="290" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="614" y="308" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">16</text>
+    <rect x="642" y="290" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="642" y="290" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="660" y="308" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">17</text>
+    <rect x="688" y="290" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="688" y="290" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="706" y="308" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">18</text>
+    <rect x="734" y="290" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="734" y="290" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="752" y="308" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">19</text>
+    <rect x="780" y="290" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="780" y="290" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="798" y="308" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">20</text>
+    <rect x="826" y="290" width="36" height="26" rx="7" fill="var(--color-neutral, #9ca3af)" opacity="0.18"/>
+    <rect x="826" y="290" width="36" height="26" rx="7" fill="none" stroke="var(--color-base-content, #1f2937)" stroke-width="1.5" opacity="0.35"/>
+    <text x="844" y="308" font-family="Excalifont, sans-serif" font-size="12" fill="var(--color-base-content, #1f2937)" text-anchor="middle">21</text>
+    <text x="550" y="342" font-family="Excalifont, sans-serif" font-size="13" fill="var(--color-base-content, #1f2937)" opacity="0.7">Available times</text>
+    <rect x="550" y="352" width="72" height="28" rx="8" fill="var(--color-primary, #c9973f)" opacity="0.15"/>
+    <rect x="550" y="352" width="72" height="28" rx="8" fill="none" stroke="var(--color-primary, #c9973f)" stroke-width="2"/>
+    <text x="586" y="371" font-family="Excalifont, sans-serif" font-size="13" fill="var(--color-primary, #c9973f)" text-anchor="middle">10:00</text>
+    <rect x="632" y="352" width="72" height="28" rx="8" fill="var(--color-primary, #c9973f)"/>
+    <text x="668" y="371" font-family="Excalifont, sans-serif" font-size="13" font-weight="bold" fill="var(--color-primary-content, #ffffff)" text-anchor="middle">11:30</text>
+    <rect x="714" y="352" width="72" height="28" rx="8" fill="var(--color-primary, #c9973f)" opacity="0.15"/>
+    <rect x="714" y="352" width="72" height="28" rx="8" fill="none" stroke="var(--color-primary, #c9973f)" stroke-width="2"/>
+    <text x="750" y="371" font-family="Excalifont, sans-serif" font-size="13" fill="var(--color-primary, #c9973f)" text-anchor="middle">2:00</text>
+    <rect x="796" y="352" width="72" height="28" rx="8" fill="var(--color-primary, #c9973f)" opacity="0.15"/>
+    <rect x="796" y="352" width="72" height="28" rx="8" fill="none" stroke="var(--color-primary, #c9973f)" stroke-width="2"/>
+    <text x="832" y="371" font-family="Excalifont, sans-serif" font-size="13" fill="var(--color-primary, #c9973f)" text-anchor="middle">4:30</text>
+    <rect x="550" y="396" width="318" height="30" rx="15" fill="var(--color-success, #22c55e)" opacity="0.2"/>
+    <rect x="550" y="396" width="318" height="30" rx="15" fill="none" stroke="var(--color-success, #22c55e)" stroke-width="2"/>
+    <text x="709" y="416" font-family="Excalifont, sans-serif" font-size="14" font-weight="bold" fill="var(--color-success, #22c55e)" text-anchor="middle">✓ CONFIRM BOOKING</text>
+  </g>
+  <g stroke-linecap="round" stroke-linejoin="round" font-family="Excalifont, sans-serif" font-size="14" text-anchor="middle">
+    <rect x="287" y="474" width="90" height="28" rx="8" fill="var(--color-primary, #c9973f)" opacity="0.15"/>
+    <rect x="287" y="474" width="90" height="28" rx="8" fill="none" stroke="var(--color-primary, #c9973f)" stroke-width="2"/>
+    <text x="332.0" y="493" fill="var(--color-primary, #c9973f)">Next.js</text>
+    <rect x="391" y="474" width="74" height="28" rx="8" fill="var(--color-secondary, #ec4899)" opacity="0.15"/>
+    <rect x="391" y="474" width="74" height="28" rx="8" fill="none" stroke="var(--color-secondary, #ec4899)" stroke-width="2"/>
+    <text x="428.0" y="493" fill="var(--color-secondary, #ec4899)">React</text>
+    <rect x="479" y="474" width="96" height="28" rx="8" fill="var(--color-accent, #14b8a6)" opacity="0.15"/>
+    <rect x="479" y="474" width="96" height="28" rx="8" fill="none" stroke="var(--color-accent, #14b8a6)" stroke-width="2"/>
+    <text x="527.0" y="493" fill="var(--color-accent, #14b8a6)">Tailwind</text>
+    <rect x="589" y="474" width="84" height="28" rx="8" fill="var(--color-success, #22c55e)" opacity="0.15"/>
+    <rect x="589" y="474" width="84" height="28" rx="8" fill="none" stroke="var(--color-success, #22c55e)" stroke-width="2"/>
+    <text x="631.0" y="493" fill="var(--color-success, #22c55e)">Vercel</text>
+  </g>
 </svg>
